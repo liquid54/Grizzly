@@ -19,7 +19,6 @@ const config: Config = {
         'Roboto-Medium': ['var(--font-roboto)'],
         'Roboto-Bold': ['var(--font-roboto)'],
       },
-
       borderGradient: {
         colors: {
           'blue': ['#29BBDF', '#008AAC'],

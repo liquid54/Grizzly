@@ -1,0 +1,34 @@
+import type { Config } from 'tailwindcss'
+import {TailwindColors} from '@/constants/Colors'
+import tailwindcssBorderGradientRadius from 'tailwindcss-border-gradient-radius'
+
+const config: Config = {
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/constants/**/*.{js,ts,jsx,tsx}'
+  ],
+  theme: {
+    extend: {
+      colors: {
+        ...TailwindColors
+      },
+      fontFamily: {
+        Roboto: ['var(--font-roboto)'],
+        'Roboto-Medium': ['var(--font-roboto)'],
+        'Roboto-Bold': ['var(--font-roboto)'],
+      },
+      borderGradient: {
+        colors: {
+          'blue': ['#29BBDF', '#008AAC'],
+        },
+      },
+    },
+  },
+  plugins: [
+    tailwindcssBorderGradientRadius
+  ],
+}
+
+export default config

@@ -6,7 +6,7 @@ const Tron = () => {
         <div className="relative w-[172.03825670809562px] h-[172.03825670809562px]">
             <Image
                 src="/Polkadot.png"
-                alt="Tron"
+                alt="Polkadot"
                 className="object-contain"
                 style={{ transform: 'rotate(-23.9deg)' }}
                 fill

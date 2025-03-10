@@ -1,11 +1,12 @@
-import About from "@/features/aboutUs/page";
+
+
 
 
 const AboutPage = () => {
     return (
-        <>
-            <About/>
-        </>
+        <div>
+            <h1>About Page</h1>
+        </div>
     );
 }
 

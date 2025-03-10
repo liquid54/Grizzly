@@ -1,10 +1,11 @@
-import Faq from "@/features/faq/page";
+
+
 
 
 const FAQPage = () => {
     return (
         <div>
-            <Faq/>
+            <h1>FAQ Page</h1>
         </div>
     );
 }

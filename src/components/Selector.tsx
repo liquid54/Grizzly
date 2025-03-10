@@ -23,9 +23,9 @@ const Selector = ({
     const selectorLabel = label || (type === 'crypto' ? 'Tether (TRC-20) USDT' : 'ПУМБ');
 
     return (
-        <div className={`bg-[#F0F0F3] border-1 border-[#CFCEDB] rounded-[16px] w-full max-w-[500px] ${className}`} {...props}>
+        <div className={`gap-6 bg-[#F0F0F3] border-1 border-[#CFCEDB] rounded-[16px] ${className}`} {...props}>
             <div className='flex flex-row items-center justify-between px-[30px] py-[18px] '>
-                <div className='flex space-x-[20px] items-center'>
+                <div className='flex space-x-[20px] '>
                     <Icon />
                     <ThemedText type='text_bold'>{selectorLabel}</ThemedText>
                 </div>

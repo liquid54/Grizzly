@@ -57,13 +57,13 @@ const Input = ({
             )}
             <div className={`bg-[#F0F0F3] border border-[#CFCEDB] rounded-[16px] ${className}`}>
                 {/* Обгортка для вмісту інпута з використанням flexbox */}
-                <div className="flex items-center">
+                <div className="flex">
                     {/* Інпут тепер займає більшу частину простору */}
                     <input
                         type="text"
                         value={inputValue}
                         onChange={handleInputChange}
-                        className="flex-grow px-[30px] py-[18px] text-[24px] semibold outline-none"
+                        className="flex px-[30px] py-[18px] text-[24px] semibold outline-none"
                         placeholder={placeholder}
                         {...props}
                     />

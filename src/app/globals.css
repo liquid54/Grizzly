@@ -1,1 +1,34 @@
 @import "tailwindcss";
+/* Import Unbounded and Poppins fonts */
+@import url('https://fonts.googleapis.com/css2?family=Unbounded');
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+:root {
+    --color-amber-100: oklch(0.967 0.003 264.542);
+    --color-cyan: #29BBDF;
+    --color-dark-brown: #1E1E1E;  /* Changed name */
+    --color-new-gey: #A1A1A5;
+    --color-new-white: #ffffff;
+    --color-light-red: #F0101B;
+
+    /* Font variables */
+    --font-unbounded: 'Unbounded';
+    --font-poppins: 'Poppins';
+}
+
+[data-theme="dark"] {
+    --acme-canvas-color: oklch(0.21 0.034 264.665);
+}
+
+@theme inline {
+    --color-canvas: var(--acme-canvas-color);
+    --color-blue-100: var(--color-cyan);
+    --color-brown-100: var(--color-dark-brown);
+    --color-white-200: var(--color-new-gey);
+    --color-white-100: var(--color-new-white);
+    --color-red-100: var(--color-light-red);
+
+    /* Font theme variables */
+    --font-unbounded: var(--font-unbounded);
+    --font-poppins: var(--font-poppins);
+}

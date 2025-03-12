@@ -4,6 +4,7 @@ import {ThemedText} from "@/components/ThemedText";
 import Change from "@/assets/icons/Change";
 import Agreement from "@/components/Agreement";
 import Button from "@/components/Button";
+import Link from "next/link";
 
 const Exchange = ({ fullWidthButton = false, visibleBorder = false, ...props }) => {
     return (
@@ -26,7 +27,9 @@ const Exchange = ({ fullWidthButton = false, visibleBorder = false, ...props }) 
 
                 <Agreement/>
                 <div className='flex justify-center'>
-                    <Button size='medium' className={fullWidthButton ? 'w-full' : ''} >Exchange</Button>
+                    <Link href='/exchangeconfirm'>
+                        <Button size='medium' className={fullWidthButton ? 'w-full' : ''} >Exchange</Button>
+                    </Link>
                 </div>
             </div>
         </div>

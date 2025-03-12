@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import {ThemedText} from "@/components/ThemedText";
+import { ThemedText } from "@/components/ThemedText";
+import Copy from "@/assets/icons/Copy";
 
 type InputProps = {
     value?: string;
@@ -10,7 +11,8 @@ type InputProps = {
     defaultValue?: string;
     placeholder?: string;
     className?: string;
-    label?: string;          // Додаємо текст-лейбл для інпуту
+    label?: string;
+    showCopyIcon?: boolean;
 };
 
 const Input = ({
@@ -21,9 +23,9 @@ const Input = ({
                    placeholder = "",
                    className = '',
                    label,
+                   showCopyIcon = false,
                    ...props
                }: InputProps) => {
-    // Встановлюємо значення за замовчуванням залежно від типу
     let typeDefaultValue = "";
     if (type === 'crypto') {
         typeDefaultValue = "300.00";
@@ -32,21 +34,18 @@ const Input = ({
     }
     const initialValue = value || defaultValue || typeDefaultValue;
 
-    // Створюємо локальний стейт для значення інпуту
     const [inputValue, setInputValue] = useState(initialValue);
 
-    // Синхронізуємо локальний стейт із зовнішнім value, якщо він змінюється
     useEffect(() => {
         if (value !== undefined) {
             setInputValue(value);
         }
     }, [value]);
 
-    // Функція обробки зміни значення інпуту
     function handleInputChange(event: React.ChangeEvent<HTMLInputElement>) {
         const newValue = event.target.value;
-        setInputValue(newValue); // Оновлюємо локальний стейт
-        onChange?.(newValue);    // Викликаємо зовнішній обробник, якщо він є
+        setInputValue(newValue);
+        onChange?.(newValue);
     }
 
     return (
@@ -57,24 +56,35 @@ const Input = ({
                 </ThemedText>
             )}
             <div className={`bg-[#F0F0F3] border border-[#CFCEDB] rounded-[16px] ${className}`}>
-                <div className="relative">
+                {/* Обгортка для вмісту інпута з використанням flexbox */}
+                <div className="flex items-center">
+                    {/* Інпут тепер займає більшу частину простору */}
                     <input
                         type="text"
                         value={inputValue}
                         onChange={handleInputChange}
-                        className="w-full px-[30px] py-[18px] text-[24px] semibold outline-none"
+                        className="flex-grow px-[30px] py-[18px] text-[24px] semibold outline-none"
                         placeholder={placeholder}
                         {...props}
                     />
+
+                    {/* Валютний суфікс, якщо потрібен */}
                     {type === 'crypto' && (
-                        <span className="absolute right-[30px] top-1/2 transform -translate-y-1/2 text-[#666666] text-[24px]">
+                        <span className="text-[#666666] text-[24px]">
                             USD
                         </span>
                     )}
                     {type === 'bank' && (
-                        <span className="absolute right-[30px] top-1/2 transform -translate-y-1/2 text-[#666666] text-[24px]">
+                        <span className="text-[#666666] text-[24px]">
                             UAH
                         </span>
+                    )}
+
+                    {/* Іконка копіювання з правого боку */}
+                    {showCopyIcon && (
+                        <div className='pr-[30px]'>
+                            <Copy className="fill-black"/>
+                        </div>
                     )}
                 </div>
             </div>

@@ -1,11 +1,27 @@
-import ExchangeInfo from "@/components/exchange/exchange-card/page";
+import ExchangeInfo from "@/components/ExchangeInfo/ExchangeInfo";
+import Input from "@/components/Input";
+import Button from "@/components/Button";
+import Link from "next/link";
 
-const ExchangeInfoPage = () => {
+
+const CardInfo = () => {
     return (
         <div className='px-[515px] pt-[50px] pb-[23px]'>
-            <ExchangeInfo buttonLink="/exchange-payment"/>
+            <ExchangeInfo/>
+
+            <div className='px-[194px] flex flex-col gap-y-[30px] pt-[30px]'>
+                <Input label={'Card number'} placeholder={'Write your card here'}/>
+                <Input label={'Card holder`s name'} placeholder={'Write your name here'}/>
+                <Input label={'Date'} placeholder={'MM/YY'}/>
+                <Input label={'CVV Code'} placeholder={'Write your CVV code here'}/>
+                <div className='flex justify-center pt-[30px]'>
+                    <Link href='/exchange-payment'>
+                        <Button size='medium'>Continue</Button>
+                    </Link>
+                </div>
+            </div>
         </div>
     );
 }
 
-export default ExchangeInfoPage;
+export default CardInfo;

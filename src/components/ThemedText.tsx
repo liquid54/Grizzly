@@ -6,7 +6,9 @@ export type textEnum =
     | 'title'
     | 'title_exchange'
     | 'subtitle'
+    | 'subtitle_blue'
     | 'text'
+    | 'text_blue'
     | 'link_text'
     | 'placeholder_text'
     | 'text_bold'
@@ -25,24 +27,26 @@ export type ThemedTextProps = React.HTMLAttributes<HTMLSpanElement> & {
 export function ThemedText({ type = 'text', className = '', ...rest }: ThemedTextProps) {
     return (
         <span
-            className={`leading-100%
-        ${type === 'heading' ? 'text-[70px] font-bold  text-[#1E1E1E]' : ''}
-        ${type === 'heading_blue' ? 'text-[70px] font-bold text-[#29BBDF]' : ''}
-        ${type === 'title' ? 'text-[52px] font-semibold text-[#1E1E1E]' : ''}
-        ${type === 'subtitle' ? 'text-[20px] font-semibold text-[#1E1E1E]' : ''}
+            className={`leading-[100%] tracking-normal
+        ${type === 'heading' ? 'text-[70px] font-bold text-brown-100 font-unbounded' : ''}
+        ${type === 'heading_blue' ? 'text-[70px] font-bold text-blue-100 font-unbounded' : ''}
+        ${type === 'title' ? 'text-[52px] font-semibold text-brown-100 font-unbounded' : ''}
+        ${type === 'subtitle' ? 'text-[20px] font-semibold text-brown-100 font-unbounded' : ''}
+        ${type === 'subtitle_blue' ? 'text-[34px] font-bold text-blue-100 font-unbounded' : ''}
 
-        ${type === 'title_exchange' ? 'text-[22px] leading-[20px] font-bold text-[#1E1E1E]' : ''}
-        ${type === 'text_exchange' ? 'text-[16px] leading-[20px] font-medium text-[#1E1E1E]' : ''}
+        ${type === 'title_exchange' ? 'text-[22px] leading-[20px] font-bold text-brown-100 font-poppins' : ''}
+        ${type === 'text_exchange' ? 'text-[16px] leading-[20px] font-medium text-brown-100 font-poppins' : ''}
         
         
-        ${type === 'text' ? 'text-[18px] text-[#1E1E1E]' : ''}
-        ${type === 'link_text' ? 'text-[18px] text-[#29BBDF]' : ''}
-        ${type === 'placeholder_text' ? 'text-[24px] text-[#A1A1A5]' : ''}
-        ${type === 'text_bold' ? 'text-[24px] font-bold text-[#1E1E1E]' : ''}
-        ${type === 'text_button_white' ? 'font-medium text-[18px] text-[#ffffff]' : ''}
-        ${type === 'text_button_blue' ? 'font-medium text-[18px] text-[#29BBDF]' : ''}
-        ${type === 'text_button_red' ? 'font-medium text-[18px] text-[#F0101B]' : ''}
-        ${type === 'text_button_red' ? 'font-medium text-[18px] text-[#F0101B]' : ''}
+        ${type === 'text' ? 'text-[18px] text-brown-100 font-poppins' : ''}
+        ${type === 'text_blue' ? 'text-[18px] font-bold text-blue-100 font-poppins' : ''}
+        ${type === 'link_text' ? 'text-[18px] text-blue-100 font-poppins' : ''}
+        ${type === 'placeholder_text' ? 'text-[24px] text-white-200 font-poppins' : ''}
+        ${type === 'text_bold' ? 'text-[24px] font-bold text-brown-100 font-poppins' : ''}
+        ${type === 'text_button_white' ? 'font-medium text-[18px] text-white-100 font-poppins' : ''}
+        ${type === 'text_button_blue' ? 'font-medium text-[18px] text-blue-100 font-poppins' : ''}
+        ${type === 'text_button_red' ? 'font-medium text-[18px] text-red-100 font-poppins' : ''}
+        ${type === 'text_button_red' ? 'font-medium text-[18px] text-red-100 font-poppins' : ''}
 
         ${type === 'empty' ? '' : ''}
         ${className}`}

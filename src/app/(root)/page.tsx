@@ -4,6 +4,7 @@
     import Exchange from "@/components/Exchange";
     import ExchangeList from "@/components/ExchangeList";
     import AboutUs from "@/components/AboutUs";
+    import Link from "next/link";
 
 
     const HomePage = () => {
@@ -20,7 +21,9 @@
                                 Viverra pellentesque elementum tristique nibh urna bibendum sollicitudin elit
                                 bibendum.
                             </ThemedText>
-                            <Button variant='primary' size='medium'>Exchange</Button>
+                            <Link href='/exchange'>
+                                <Button variant='primary' size='medium'>Exchange</Button>
+                            </Link>
                         </div>
                         <Image
                             width={1920}

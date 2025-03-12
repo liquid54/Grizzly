@@ -25,7 +25,7 @@ const Selector = ({
     return (
         <div className={`gap-6 bg-[#F0F0F3] border-1 border-[#CFCEDB] rounded-[16px] ${className}`} {...props}>
             <div className='flex flex-row items-center justify-between px-[30px] py-[18px] '>
-                <div className='flex space-x-[20px] '>
+                <div className='flex space-x-[20px] items-center'>
                     <Icon />
                     <ThemedText type='text_bold'>{selectorLabel}</ThemedText>
                 </div>

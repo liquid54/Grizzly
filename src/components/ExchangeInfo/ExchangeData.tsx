@@ -1,10 +1,9 @@
 import {exchangeData} from "@/components/ExchangeInfo/constants";
 import {ThemedText} from "@/components/ThemedText";
 import Arrow from "@/assets/icons/Arrow";
-import Exchange from "@/components/Exchange";
+import {Exchange} from "@/components/ExchangeInfo/constants";
 
-
-function ExchangeItem({ item }: Exchange) {
+function ExchangeItem({ item }: { item: Exchange }) {
     return (
         <div className="flex justify-between items-center gap-x-[30px]">
             <div className="flex flex-col">

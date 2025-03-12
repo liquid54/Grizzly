@@ -26,7 +26,7 @@ const Exchange = ({ fullWidthButton = false, visibleBorder = false, ...props }) 
                 </div>
 
                 <Agreement/>
-                <div className='flex justify-center'>
+                <div className=''>
                     <Link href='/exchangeconfirm'>
                         <Button size='medium' className={fullWidthButton ? 'w-full' : ''} >Exchange</Button>
                     </Link>

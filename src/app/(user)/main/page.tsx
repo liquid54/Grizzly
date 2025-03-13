@@ -2,6 +2,7 @@ const UserMainPage = () => {
     return (
         <div>
             UserMainPage
+
         </div>
     );
 }

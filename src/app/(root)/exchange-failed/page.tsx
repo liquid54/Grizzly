@@ -29,8 +29,8 @@ const ExchangeFailed = () => {
                         </div>
                     </div>
                     <div className='flex flex-col gap-y-[10px] items-center'>
-                        <ThemedText type='title'>Exchange successfully!</ThemedText>
-                        <ThemedText>Your exchange has been successfully processed! The funds will now be transferred to your provided details. The processing time depends on the payment system and network load. If you do not receive the funds within the expected timeframe, please contact our support team. Thank you for choosing our service!</ThemedText>
+                        <ThemedText type='title'>Exchange failed!</ThemedText>
+                        <ThemedText>Unfortunately, an error occurred during the cryptocurrency exchange. This may be caused by temporary technical issues or incorrect data input. Please check the provided details and try again. If the issue persists, contact our support team for prompt assistance.</ThemedText>
                     </div>
                     <div className='flex flex-col gap-y-[10px] items-center'>
                         <Link href='/exchange-failed'>

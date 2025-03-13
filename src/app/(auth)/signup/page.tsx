@@ -18,22 +18,22 @@ const SignUp = () => {
                     />
                 </div>
                 <ThemedText type='title' className='text-[36px]'>Sign Up</ThemedText>
-                <div className='flex flex-row  gap-y-[10px]'>
-                    <ThemedText className='text-[#8A8B8E]'>Already have an account?</ThemedText> <Link
-                    href='/login'><ThemedText type='link_text'> Log In</ThemedText></Link>
+                <div className='flex flex-row gap-x-[10px] items-center'>
+                    <ThemedText className='text-[#8A8B8E]'>Already have an account?</ThemedText>
+                    <Link href='/login'><ThemedText type='link_text'>Log In</ThemedText></Link>
                 </div>
 
-                <Input label={'Email*'} placeholder={'Write your email'}/>
-                <div className='flex flex-col gap-y-[6px]'>
-                    <Input label={'Password*'} placeholder={'Write your code'}/>
+                <Input label={'Email*'} placeholder={'Write your email'} className="w-full"/>
+                <div className='flex flex-col gap-y-[6px] w-full'>
+                    <Input label={'Password*'} placeholder={'Write your code'} className="w-full"/>
                     <ThemedText type='link_text'>Show password</ThemedText>
                 </div>
-                <div className='flex flex-col gap-y-[6px]'>
-                    <Input label={'Repeat Password*'} placeholder={'Write your code'}/>
+                <div className='flex flex-col gap-y-[6px] w-full'>
+                    <Input label={'Repeat Password*'} placeholder={'Write your code'} className="w-full"/>
                     <ThemedText type='link_text'>Show password</ThemedText>
                 </div>
-                <Input label={'Telegram'} placeholder={'Write your Telegram number'}/>
-                <Input label={'Whatsapp'} placeholder={'Write your Whatsapp number'}/>
+                <Input label={'Telegram'} placeholder={'Write your Telegram number'} className="w-full"/>
+                <Input label={'Whatsapp'} placeholder={'Write your Whatsapp number'} className="w-full"/>
                 <Link href='/login'><Button>Sign Up</Button></Link>
             </div>
         </div>

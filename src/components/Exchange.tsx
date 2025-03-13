@@ -13,7 +13,7 @@ const Exchange = ({ fullWidthButton = false, visibleBorder = false, ...props }) 
                 <div className='space-y-[20px]'>
                     <Selector type="crypto"/>
                     <Input type="crypto"/>
-                    <ThemedText>Minimum exchange amount - </ThemedText><ThemedText className='text-[#29BBDF] font-bold'>30 USDT</ThemedText>
+                    <ThemedText>Minimum exchange amount - </ThemedText> <ThemedText type='text_blue'>30 USDT</ThemedText>
                 </div>
 
                 <div className="flex justify-center">

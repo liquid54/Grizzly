@@ -1,6 +1,8 @@
-import MainPanel from '@/features/user-dashboard/main-panel/components/MainPanel';
-
 const UserMainPage = () => {
-    return <MainPanel />;
-};
+    return (
+        <div>
+            UserMainPage
+        </div>
+    );
+}
 export default UserMainPage;

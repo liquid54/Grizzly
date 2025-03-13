@@ -1,5 +1,4 @@
 import type { Config } from 'tailwindcss'
-import {TailwindColors} from '@/constants/Colors'
 import tailwindcssBorderGradientRadius from 'tailwindcss-border-gradient-radius'
 
 const config: Config = {
@@ -11,15 +10,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        ...TailwindColors
-      },
       fontFamily: {
         Roboto: ['var(--font-roboto)'],
         'Roboto-Medium': ['var(--font-roboto)'],
         'Roboto-Bold': ['var(--font-roboto)'],
       },
-
       borderGradient: {
         colors: {
           'blue': ['#29BBDF', '#008AAC'],

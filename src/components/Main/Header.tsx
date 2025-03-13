@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Button from "@/components/Button";
-import Navigation from "@/components/Navigation";
-import LanguageSwitcher from "@/components/LanguageSelector";
+import Navigation from "@/components/Main/Navigation";
+import LanguageSwitcher from "@/components/User/LanguageSelector";
+import Link from "next/link";
 
 const Header = () => {
     return (
@@ -26,8 +27,8 @@ const Header = () => {
                             </div>
                         </div>
                         <div className='flex gap-x-[16px] items-center'>
-                            <Button variant='secondary' size='small'>Log In</Button>
-                            <Button variant='primary' size='small'>Sign Up</Button>
+                            <Link href='/login'><Button variant='secondary' size='small'>Log In</Button></Link>
+                            <Link href='/signup'><Button  variant='primary' size='small'>Sign Up</Button></Link>
                         </div>
                     </div>
                 </div>

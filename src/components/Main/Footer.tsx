@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Navigation from "@/components/Navigation";
-import LanguageSwitcher from "@/components/LanguageSelector";
+import Navigation from "@/components/Main/Navigation";
+import LanguageSwitcher from "@/components/User/LanguageSelector";
 import {ThemedText} from "@/components/ThemedText";
 
 

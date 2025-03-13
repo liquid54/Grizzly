@@ -49,40 +49,28 @@ const Input = ({
     }
 
     return (
-        <div className="flex flex-col space-y-[6px]">
+        <div className="flex flex-col space-y-[6px] w-full">
             {label && (
                 <ThemedText type='subtitle' >
                     {label}
                 </ThemedText>
             )}
-            <div className={`bg-[#F0F0F3] border border-[#CFCEDB] rounded-[16px] ${className}`}>
+            <div className={`bg-[#F0F0F3] border border-[#CFCEDB] rounded-[16px] w-full ${className}`}>
                 {/* Обгортка для вмісту інпута з використанням flexbox */}
-                <div className="flex">
+                <div className="flex w-full">
                     {/* Інпут тепер займає більшу частину простору */}
                     <input
                         type="text"
                         value={inputValue}
                         onChange={handleInputChange}
-                        className="flex px-[30px] py-[18px] text-[24px] semibold outline-none"
+                        className="flex-1 px-[30px] py-[18px] text-[24px] semibold outline-none w-full bg-transparent rounded-[16px]"
                         placeholder={placeholder}
                         {...props}
                     />
 
-                    {/* Валютний суфікс, якщо потрібен */}
-                    {type === 'crypto' && (
-                        <span className="text-[#666666] text-[24px]">
-                            USD
-                        </span>
-                    )}
-                    {type === 'bank' && (
-                        <span className="text-[#666666] text-[24px]">
-                            UAH
-                        </span>
-                    )}
-
                     {/* Іконка копіювання з правого боку */}
                     {showCopyIcon && (
-                        <div className='pr-[30px]'>
+                        <div className='pr-[30px] flex items-center'>
                             <Copy className="fill-black"/>
                         </div>
                     )}

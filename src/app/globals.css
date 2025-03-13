@@ -1,12 +1,12 @@
-@import "tailwindcss";
-/* Import Unbounded and Poppins fonts */
+/* Перемістити всі імпорти на початок файлу */
 @import url('https://fonts.googleapis.com/css2?family=Unbounded');
 @import url('https://fonts.googleapis.com/css2?family=Poppins');
+@import "tailwindcss";
 
 :root {
     --color-amber-100: oklch(0.967 0.003 264.542);
     --color-cyan: #29BBDF;
-    --color-dark-brown: #1E1E1E;  /* Changed name */
+    --color-dark-brown: #1E1E1E;
     --color-new-gey: #A1A1A5;
     --color-new-white: #ffffff;
     --color-light-red: #F0101B;

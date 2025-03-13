@@ -27,15 +27,15 @@ export type ThemedTextProps = React.HTMLAttributes<HTMLSpanElement> & {
 export function ThemedText({ type = 'text', className = '', ...rest }: ThemedTextProps) {
     return (
         <span
-            className={`leading-[100%] tracking-normal
-        ${type === 'heading' ? 'text-[70px] font-bold text-brown-100 font-unbounded' : ''}
-        ${type === 'heading_blue' ? 'text-[70px] font-bold text-blue-100 font-unbounded' : ''}
+            className={`
+        ${type === 'heading' ? 'text-[70px] font-bold text-brown-100 font-unbounded leading-[100%] tracking-[0%]' : ''}
+        ${type === 'heading_blue' ? 'text-[70px] font-bold text-blue-100 font-unbounded leading-[100%] tracking-[0%]' : ''}
         ${type === 'title' ? 'text-[52px] font-semibold text-brown-100 font-unbounded' : ''}
         ${type === 'subtitle' ? 'text-[20px] font-semibold text-brown-100 font-unbounded' : ''}
         ${type === 'subtitle_blue' ? 'text-[34px] font-bold text-blue-100 font-unbounded' : ''}
 
-        ${type === 'title_exchange' ? 'text-[22px] leading-[20px] font-bold text-brown-100 font-poppins' : ''}
-        ${type === 'text_exchange' ? 'text-[16px] leading-[20px] font-medium text-brown-100 font-poppins' : ''}
+        ${type === 'title_exchange' ? 'text-[22px] leading-[20px] font-bold text-brown-100 font-poppins block uppercase' : ''}
+        ${type === 'text_exchange' ? 'text-[16px] leading-[20px] font-medium text-brown-100 font-poppins block uppercase' : ''}
         
         
         ${type === 'text' ? 'text-[18px] text-brown-100 font-poppins' : ''}

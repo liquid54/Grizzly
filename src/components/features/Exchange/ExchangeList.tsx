@@ -1,4 +1,4 @@
-import ExchangeCard from "@/components/ExchangeCard";
+import ExchangeCard from "@/components/features/Exchange/ExchangeCard";
 import {exchangeData} from "@/components/constants";
 
 

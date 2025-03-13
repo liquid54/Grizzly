@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Arrow from "@/assets/icons/Arrow";
-import {ThemedText} from "./ThemedText";
+import {ThemedText} from "../ThemedText";
 import ButtonTg from "@/components/ButtonTG";
 
 interface LanguageSwitcherProps {

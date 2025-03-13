@@ -1,5 +1,5 @@
 import {ThemedText} from "@/components/ThemedText";
-import ExchangeData from "@/components/ExchangeInfo/ExchangeData";
+import ExchangeData from "@/components/features/Exchange/ExchangeData";
 
 
 const ExchangeInfo = () => {

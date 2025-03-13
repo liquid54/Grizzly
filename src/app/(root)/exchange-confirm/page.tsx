@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const ExchaneConfirm = () => {
     return (
-        <div className='pt-[100px] pb-[161px] px-[370px]'>
+        <div className='pt-[100px] pb-[151px] px-[370px]'>
             <div className='flex flex-col items-center gap-y-[30px]'>
                 <div className='w-[220px]'>
                     <div className='relative'>
@@ -28,11 +28,11 @@ const ExchaneConfirm = () => {
                 </div>
                 <div className='flex flex-col gap-y-[10px] items-center'>
                     <ThemedText type='title'>Exchange successfully!</ThemedText>
-                    <ThemedText>Your exchange has been successfully processed! The funds will now be transferred to your provided details. The processing time depends on the payment system and network load. If you do not receive the funds within the expected timeframe, please contact our support team. Thank you for choosing our service!</ThemedText>
+                    <ThemedText className='text-center'>Your exchange has been successfully processed! The funds will now be transferred to your provided details. The processing time depends on the payment system and network load. If you do not receive the funds within the expected timeframe, please contact our support team. Thank you for choosing our service!</ThemedText>
                 </div>
                 <div className='flex flex-col gap-y-[10px] items-center'>
                     <Link href='/exchange-failed'>
-                        <Button>Done</Button>
+                        <Button size='mid_large'>Done</Button>
                     </Link>
                     <ThemedText type='link_text'>Didnt receive the funds?</ThemedText>
                 </div>

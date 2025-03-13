@@ -17,7 +17,7 @@ const ExchangePayment = () => {
                 <Input value='TQpB4CmDkZ6s8H1rJ7k2N9Xm' showCopyIcon={true} className='items-center'/>
             </div>
             <Link href='/exchange-payment-confirm'>
-                <Button size='medium'>Exchange</Button>
+                <Button size='mid_large'>Exchange</Button>
             </Link>
         </div>
     );

@@ -30,11 +30,11 @@ const ExchangeFailed = () => {
                     </div>
                     <div className='flex flex-col gap-y-[10px] items-center'>
                         <ThemedText type='title'>Exchange failed!</ThemedText>
-                        <ThemedText>Unfortunately, an error occurred during the cryptocurrency exchange. This may be caused by temporary technical issues or incorrect data input. Please check the provided details and try again. If the issue persists, contact our support team for prompt assistance.</ThemedText>
+                        <ThemedText className='text-center'>Unfortunately, an error occurred during the cryptocurrency exchange. This may be caused by temporary technical issues or incorrect data input. Please check the provided details and try again. If the issue persists, contact our support team for prompt assistance.</ThemedText>
                     </div>
                     <div className='flex flex-col gap-y-[10px] items-center'>
                         <Link href='/exchange-failed'>
-                            <Button>Done</Button>
+                            <Button size='mid_large'>Done</Button>
                         </Link>
                         <ThemedText type='link_text'>Didnt receive the funds?</ThemedText>
                     </div>

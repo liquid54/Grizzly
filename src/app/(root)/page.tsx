@@ -1,9 +1,9 @@
 import {ThemedText} from "@/components/ThemedText";
 import Button from "@/components/Button";
 import Image from "next/image";
-import Exchange from "@/components/Exchange";
-import ExchangeList from "@/components/ExchangeList";
-import AboutUs from "@/components/AboutUs";
+import Exchange from "@/components/features/Exchange/Exchange";
+import ExchangeList from "@/components/features/Exchange/ExchangeList";
+import AboutUs from "@/components/Main/AboutUs";
 import Link from "next/link";
 
 import BackgroundCircles from "@/components/Main/bgCircles/BgCircles";

@@ -55,26 +55,21 @@ const Input = ({
                     {label}
                 </ThemedText>
             )}
-            <div className={`bg-[#F0F0F3] border border-[#CFCEDB] rounded-[16px] w-full ${className}`}>
-                {/* Обгортка для вмісту інпута з використанням flexbox */}
-                <div className="flex w-full">
-                    {/* Інпут тепер займає більшу частину простору */}
-                    <input
-                        type="text"
-                        value={inputValue}
-                        onChange={handleInputChange}
-                        className="flex-1 px-[30px] py-[18px] text-[24px] semibold outline-none w-full bg-transparent rounded-[16px]"
-                        placeholder={placeholder}
-                        {...props}
-                    />
+            <div className={`relative bg-[#F0F0F3] border border-[#CFCEDB] rounded-[16px] w-full ${className}`}>
+                <input
+                    type="text"
+                    value={inputValue}
+                    onChange={handleInputChange}
+                    className="w-full px-[31px] pr-[60px] py-[21px] text-[24px] semibold outline-none bg-transparent rounded-[16px]"
+                    placeholder={placeholder}
+                    {...props}
+                />
 
-                    {/* Іконка копіювання з правого боку */}
-                    {showCopyIcon && (
-                        <div className='pr-[30px] flex items-center'>
-                            <Copy className="fill-black"/>
-                        </div>
-                    )}
-                </div>
+                {showCopyIcon && (
+                    <div className="absolute right-[30px] top-1/2 transform -translate-y-1/2">
+                        <Copy className="fill-black" />
+                    </div>
+                )}
             </div>
         </div>
     );

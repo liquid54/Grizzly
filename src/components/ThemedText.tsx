@@ -4,6 +4,7 @@ export type textEnum =
     | 'heading'
     | 'heading_blue'
     | 'title'
+    | 'title_poppins'
     | 'title_exchange'
     | 'subtitle'
     | 'subtitle_blue'
@@ -31,7 +32,8 @@ export function ThemedText({ type = 'text', className = '', ...rest }: ThemedTex
         ${type === 'heading' ? 'text-[70px] font-bold text-brown-100 font-unbounded leading-[100%] tracking-[0%]' : ''}
         ${type === 'heading_blue' ? 'text-[70px] font-bold text-blue-100 font-unbounded leading-[100%] tracking-[0%]' : ''}
         ${type === 'title' ? 'text-[52px] font-semibold text-brown-100 font-unbounded' : ''}
-        ${type === 'subtitle' ? 'text-[20px] font-semibold text-brown-100 font-unbounded' : ''}
+        ${type === 'title_poppins' ? 'text-[24px] font-semibold text-brown-100 font-poppins' : ''}
+        ${type === 'subtitle' ? 'text-[20px] font-bold text-brown-100 font-poppins' : ''}
         ${type === 'subtitle_blue' ? 'text-[34px] font-bold text-blue-100 font-unbounded' : ''}
 
         ${type === 'title_exchange' ? 'text-[22px] leading-[20px] font-bold text-brown-100 font-poppins block uppercase' : ''}

@@ -1,4 +1,4 @@
-import ExchangeInfo from "@/components/ExchangeInfo/ExchangeInfo";
+import ExchangeInfo from "@/components/features/Exchange/ExchangeInfo";
 import Input from "@/components/Input";
 import Button from "@/components/Button";
 import Link from "next/link";
@@ -14,7 +14,7 @@ const CardInfo = () => {
                 <Input label={'Card holder`s name'} placeholder={'Write your name here'}/>
                 <Input label={'Date'} placeholder={'MM/YY'}/>
                 <Input label={'CVV Code'} placeholder={'Write your CVV code here'}/>
-                <div className='flex justify-center pt-[30px]'>
+                <div className='flex justify-center pb-[30px]'>
                     <Link href='/exchange-payment'>
                         <Button size='medium'>Continue</Button>
                     </Link>

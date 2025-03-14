@@ -7,7 +7,7 @@ const ExchangeDescription = () => {
         <div className='flex flex-col space-y-[10px]'>
             <div className='flex flex-col space-y-[10px] items-center'>
                 <ThemedText type='title'>Exchange confirmation</ThemedText>
-                <ThemedText type='text' className='text-center'>To confirm your exchange application, confirm your email.</ThemedText>
+                <ThemedText type='text'>To confirm your exchange application, confirm your email.</ThemedText>
             </div>
             <ExchangeData></ExchangeData>
         </div>

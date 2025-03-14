@@ -34,7 +34,7 @@ const ExchangeFailed = () => {
                     assistance.</ThemedText>
             </div>
             <div className='flex flex-col gap-y-[10px] items-center'>
-                <Link href=''>
+                <Link href='/exchange-failed'>
                     <Button size='mid_large'>Done</Button>
                 </Link>
                 <ThemedText type='link_text'>Didnt receive the funds?</ThemedText>

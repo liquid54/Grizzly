@@ -15,7 +15,7 @@ const PaymentConfirm = ({ buttonLink = '' }: { buttonLink?: string }) => {
                 <ThemedText type='subtitle' className='text-[18px]'>Pay within one hour</ThemedText>
                 <ThemedText className='text-center'>Please transfer the specified amount to the provided cryptocurrency wallet address. Once the transaction is confirmed on the network, the exchange will be processed automatically. Dont forget to account for the network fee to ensure the transferred amount matches your request.</ThemedText>
             </div>
-            <div className='flex flex-col gap-y-[30px] pt-[30px] items-center'>
+            <div className='px-[357px] flex flex-col gap-y-[30px] pt-[30px] '>
                 <Input label={'Card number'} placeholder={'Write your card here'}/>
                 <Input label={'Card holder`s name'} placeholder={'Write your name here'}/>
                 <Input label={'Date'} placeholder={'MM/YY'}/>

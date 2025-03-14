@@ -2,7 +2,7 @@ import {ThemedText} from "@/components/ThemedText";
 import Exchange from "@/components/exchange/Exchange";
 
 
-const ExchangeMain = ({ buttonLink, visibleBorder }: { buttonLink?: string , visibleBorder?: boolean}) => {
+const ExchangeMain = ({ buttonLink }: { buttonLink?: string }) => {
     return (
         <div className='flex flex-col gap-y-[30px]'>
             <div className='flex items-center justify-center'>
@@ -10,7 +10,7 @@ const ExchangeMain = ({ buttonLink, visibleBorder }: { buttonLink?: string , vis
             </div>
             <div className='px-[56px]'>
                 <Exchange
-                    visibleBorder={visibleBorder}
+                    visibleBorder={true}
                     fullWindow={true}
                     buttonLink={buttonLink}
                 />

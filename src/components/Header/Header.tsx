@@ -16,7 +16,7 @@ const Header = ({ isMain = false }: { isMain?: boolean }) => {
 
     return (
         <>
-            <header className='shadow-header sm:shadow-none sm:border-b sm:border-white-200 h-fit'>
+            <header className='shadow-header sm:shadow-none sm:border-b sm:border-gray-100 h-fit'>
                 <nav
                     className={
                         isMain

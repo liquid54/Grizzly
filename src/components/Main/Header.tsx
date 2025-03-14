@@ -1,8 +1,9 @@
-import Image from "next/image";
-import Button from "@/components/Button";
-import Navigation from "@/components/Main/Navigation";
-import LanguageSwitcher from "@/components/User/LanguageSelector";
-import Link from "next/link";
+import Image from 'next/image';
+import Button from '@/components/Button';
+import Navigation from '@/components/Main/Navigation';
+import LanguageSwitcher from '@/components/User/LanguageSelector';
+import Link from 'next/link';
+import ButtonTg from '../ButtonTG';
 
 const Header = () => {
     return (
@@ -13,28 +14,38 @@ const Header = () => {
                         <Image
                             width={1920}
                             height={1080}
-                            src="/IMG_5815 (1).png"
-                            alt="logo"
-                            className="rounded-full w-[56px] h-[56px]"
+                            src='/IMG_5815 (1).png'
+                            alt='logo'
+                            className='rounded-full w-[56px] h-[56px]'
                         />
-
                         <Navigation />
                     </div>
                     <div className='flex flex-row gap-x-[30px]'>
-                        <div className='bg-white'>
+                        <div className='flex flex-row gap-4 items-center'>
                             <div className='flex flex-row justify-center gap-x-[16px] items-center'>
                                 <LanguageSwitcher />
                             </div>
+                            <Link href={''}>
+                                <ButtonTg />
+                            </Link>
                         </div>
                         <div className='flex gap-x-[16px] items-center'>
-                            <Link href='/login'><Button variant='secondary' size='small'>Log In</Button></Link>
-                            <Link href='/signup'><Button  variant='primary' size='small'>Sign Up</Button></Link>
+                            <Link href='/login'>
+                                <Button variant='secondary' size='small'>
+                                    Log In
+                                </Button>
+                            </Link>
+                            <Link href='/signup'>
+                                <Button variant='primary' size='small'>
+                                    Sign Up
+                                </Button>
+                            </Link>
                         </div>
                     </div>
                 </div>
             </nav>
         </header>
     );
-}
+};
 
 export default Header;

@@ -7,6 +7,7 @@
     --color-amber-100: oklch(0.967 0.003 264.542);
     --color-cyan: #29bbdf;
     --color-cyan-dark: #008aac;
+    --color-blue-300: #b6e9f6;
     --color-dark-brown: #1e1e1e;
     --color-new-gey: #a1a1a5;
     --color-gray-100: #cfcedb;
@@ -19,7 +20,7 @@
     --font-unbounded: 'Unbounded';
     --font-poppins: 'Poppins';
 
-    --header-shadow:         
+    --header-shadow:            
 ;
 }
 
@@ -31,6 +32,7 @@
     --color-canvas: var(--acme-canvas-color);
     --color-blue-100: var(--color-cyan);
     --color-blue-200: var(--color-cyan-dark);
+    --color-blue-300: var(--color-blue-300);
     --color-brown-100: var(--color-dark-brown);
     --color-white-300: var(--color-new-gey);
     --color-white-200: var(--color-light-gey);
@@ -45,5 +47,6 @@
 
     --shadow-header: 0px 2px 11.7px -2px #00000026;
 
+    --breakpoint-xs: 25.875rem;
     --breakpoint-lg: 64.0625rem;
 }

@@ -1,4 +1,4 @@
 export interface OpenMenuProps {
     isOpen: boolean;
-    setIsOpen: () => void;
+    setIsOpen?: () => void;
 }

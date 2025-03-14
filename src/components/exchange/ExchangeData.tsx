@@ -1,7 +1,7 @@
-import {exchangeData} from "@/components/features/Exchange/constants";
+import {exchangeData} from "./constants";
 import {ThemedText} from "@/components/ThemedText";
 import Arrow from "@/assets/icons/Arrow";
-import {Exchange} from "@/components/features/Exchange/constants";
+import {Exchange} from "./constants";
 
 function ExchangeItem({ item }: { item: Exchange }) {
     return (

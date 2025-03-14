@@ -1,9 +1,6 @@
-const UserMainPage = () => {
-    return (
-        <div>
-            UserMainPage
+import MainPanel from '@/features/user-dashboard/main-panel/components/MainPanel';
 
-        </div>
-    );
-}
+const UserMainPage = () => {
+    return <MainPanel />;
+};
 export default UserMainPage;

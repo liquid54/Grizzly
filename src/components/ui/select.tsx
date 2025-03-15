@@ -16,7 +16,7 @@ const CustomSelect = ({ title, classes }: SelectProps) => {
             {title && <ThemedText type='panel-medium-text'>{title}</ThemedText>}
             <Select.Root>
                 <Select.Trigger
-                    className={`inline-flex items-center justify-between  w-full max-w-full pl-[14px] pr-[10px] py-2 border border-white-200 rounded-xl bg-white text-brown-100 font-poppins focus:ring-2 focus:ring-blue-500 ${classes?.trigger}`}
+                    className={`cursor-pointer inline-flex items-center justify-between  w-full max-w-full pl-[14px] pr-[10px] py-2 border border-white-200 rounded-xl bg-white text-brown-100 font-poppins focus:ring-2 focus:ring-blue-500 ${classes?.trigger}`}
                 >
                     <Select.Value placeholder='All' />
                     <Select.Icon>

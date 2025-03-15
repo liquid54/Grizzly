@@ -43,7 +43,7 @@ const Pagination = ({
     return (
         <div className='flex items-center gap-1'>
             <button
-                className='flex items-center gap-2 p-2 sm:p-4'
+                className='flex items-center gap-2 p-2 sm:p-4 cursor-pointer'
                 disabled={currentPage === 1}
                 onClick={() => onPageChange(currentPage - 1)}
             >
@@ -69,7 +69,7 @@ const Pagination = ({
                 ) : (
                     <button
                         key={index}
-                        className={`h-[32px] w-[32px] sm:h-[40px] sm:w-[40px] flex items-center justify-center rounded-md border text-base md:text-lg font-normal leading-none text-brown-100 font-poppins ${
+                        className={`cursor-pointer h-[32px] w-[32px] sm:h-[40px] sm:w-[40px] flex items-center justify-center rounded-md border text-base md:text-lg font-normal leading-none text-brown-100 font-poppins ${
                             page === currentPage
                                 ? 'border-white-200'
                                 : 'border-transparent'
@@ -82,7 +82,7 @@ const Pagination = ({
             )}
 
             <button
-                className='flex items-center gap-2 p-2 sm:p-4'
+                className='cursor-pointer flex items-center gap-2 p-2 sm:p-4'
                 disabled={currentPage === totalPages}
                 onClick={() => onPageChange(currentPage + 1)}
             >

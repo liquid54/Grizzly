@@ -32,7 +32,7 @@ const BurgerMenuWrapper = ({
                         />
                     </Link>
                     <button
-                        className={`m-0 bg-none ${isMain && 'lg:hidden'}`}
+                        className={`m-0 bg-none ${isMain && 'lg:hidden'} cursor-pointer`}
                         onClick={setIsOpen}
                     >
                         <Image

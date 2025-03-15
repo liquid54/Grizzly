@@ -11,7 +11,7 @@ const LanguageSwitcher = ({
 }: LanguageSwitcherProps) => {
     return (
         <div className='flex flex-row justify-center gap-x-[16px] items-center'>
-            <div className='flex flex-row justify-center items-center gap-x-2'>
+            <div className='flex flex-row justify-center items-center lg:gap-x-[6px] md:gap-x-[10px]'>
                 <Arrow className='fill-black' />
                 <ThemedText type='text'>ENG</ThemedText>
                 {showLanguageIcon && (

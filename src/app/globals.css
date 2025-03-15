@@ -8,6 +8,7 @@
     --color-cyan: #29bbdf;
     --color-cyan-dark: #008aac;
     --color-blue-300: #b6e9f6;
+    --color-blue-400: #dff9ff;
     --color-dark-brown: #1e1e1e;
     --color-dark-100: #070a29;
     --color-new-gey: #a1a1a5;
@@ -33,6 +34,7 @@
     --color-blue-100: var(--color-cyan);
     --color-blue-200: var(--color-cyan-dark);
     --color-blue-300: var(--color-blue-300);
+    --color-blue-400: var(--color-blue-400);
     --color-brown-100: var(--color-dark-brown);
     --color-white-300: var(--color-new-gey);
     --color-white-200: var(--color-light-gey);

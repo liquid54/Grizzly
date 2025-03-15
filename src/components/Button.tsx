@@ -5,7 +5,15 @@ interface ButtonProps {
     children: ReactNode;
     className?: string;
     variant?: 'primary' | 'secondary' | 'red' | 'social' | 'text';
-    size?: 'large' | 'mid_large' | 'small' | 'medium' | 'tiny' | 'text' | 'xl';
+    size?:
+        | 'large'
+        | 'mid_large'
+        | 'small'
+        | 'medium'
+        | 'tiny'
+        | 'text'
+        | 'xl'
+        | '_small';
     onClick?: () => void;
     type?: 'button' | 'reset' | 'submit' | undefined;
     textType?: textEnum; // Опціональний тип тексту, який можна перевизначити
@@ -38,6 +46,7 @@ const Button = ({
         xl: 'w-full h-[48px] sm:h-[63px] sm:w-[246px] rounded-[90px] sm:rounded-[18px]',
         medium: 'h-[48px] sm:h-[63px] w-[209px] rounded-[90px] sm:rounded-[18px]',
         small: 'w-full h-[48px] sm:h-[51px] sm:w-[136px] rounded-[90px] sm:rounded-[14px]',
+        _small: 'h-[51px] w-[136px] rounded-[14px]',
         tiny: 'h-[51px] w-[51px] rounded-[14px]',
         text: '',
     };

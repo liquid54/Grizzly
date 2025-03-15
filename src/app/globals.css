@@ -9,8 +9,11 @@
     --color-cyan-dark: #008aac;
     --color-blue-300: #b6e9f6;
     --color-dark-brown: #1e1e1e;
+    --color-dark-100: #070a29;
     --color-new-gey: #a1a1a5;
     --color-gray-100: #cfcedb;
+    --color-gray-200: #8a8b8e;
+    --color-gray-300: #f6f6f8;
     --color-new-white: #ffffff;
     --color-light-red: #f0101b;
     --color-light-gey: #cfcedb;
@@ -18,10 +21,8 @@
 
     /* Font variables */
     --font-unbounded: 'Unbounded';
-    --font-poppins: 'Poppins';
-
-    --header-shadow:            
-;
+    --font-poppins: 'Poppins', sans-serif;
+    --font-mont: 'Mont', sans-serif;
 }
 
 [data-theme='dark'] {
@@ -39,14 +40,18 @@
     --color-white-100: var(--color-new-white);
     --color-red-100: var(--color-light-red);
     --color-gray-100: var(--color-gray-100);
+    --color-gray-200: var(--color-gray-200);
+    --color-gray-300: var(--color-gray-300);
     --color-dark-50: var(--color-overlay);
+    --color-dark-100: var(--color-dark-100);
 
     /* Font theme variables */
     --font-unbounded: var(--font-unbounded);
     --font-poppins: var(--font-poppins);
-
+    --font-mont: var(--font-mont);
     --shadow-header: 0px 2px 11.7px -2px #00000026;
 
-    --breakpoint-xs: 25.875rem;
+    --breakpoint-xs: 30rem;
     --breakpoint-lg: 64.0625rem;
+    --breakpoint-llg: 68.75rem;
 }

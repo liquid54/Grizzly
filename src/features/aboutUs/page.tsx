@@ -1,4 +1,4 @@
-import Card from "@/components/features/aboutUs/Card";
+import Card from "@/features/aboutUs/Card";
 import Vision from "@/assets/icons/Vision";
 import Offer from "@/assets/icons/Offer";
 import Goal from "@/assets/icons/Goal";

@@ -1,4 +1,4 @@
-import Faq from "@/components/features/FAQ/page";
+import Faq from "@/features/faq/page";
 
 
 const FAQPage = () => {

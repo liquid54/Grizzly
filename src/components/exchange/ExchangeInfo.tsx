@@ -1,8 +1,8 @@
 import {ThemedText} from "@/components/ThemedText";
-import ExchangeData from "@/components/features/Exchange/ExchangeData";
+import ExchangeData from "@/components/exchange/ExchangeData";
 
 
-const ExchangeInfo = () => {
+const ExchangeDescription = () => {
     return (
         <div className='flex flex-col space-y-[10px]'>
             <div className='flex flex-col space-y-[10px] items-center'>
@@ -14,4 +14,4 @@ const ExchangeInfo = () => {
     )
 }
 
-export default ExchangeInfo
+export default ExchangeDescription

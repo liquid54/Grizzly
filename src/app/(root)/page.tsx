@@ -1,8 +1,8 @@
 import {ThemedText} from "@/components/ThemedText";
 import Button from "@/components/Button";
 import Image from "next/image";
-import Exchange from "@/components/features/Exchange/Exchange";
-import ExchangeList from "@/components/features/Exchange/ExchangeList";
+import Exchange from "@/components/exchange/Exchange";
+import ExchangeList from "@/components/exchange/ExchangeList";
 import AboutUs from "@/components/Main/AboutUs";
 import Link from "next/link";
 

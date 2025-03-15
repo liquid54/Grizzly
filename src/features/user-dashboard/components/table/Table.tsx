@@ -2,6 +2,7 @@
 import { ThemedText } from '@/components/ThemedText';
 import { Fragment, useState, type ReactNode } from 'react';
 import Pagination from '../pagination/Pagination';
+import Link from 'next/link';
 
 interface RowData {
     [key: string]: ReactNode;
@@ -14,6 +15,7 @@ interface TableProps {
     indexMobileDismiss?: number[];
     firstRenderElementKeys?: string[];
     pagination?: boolean;
+    href?: string;
 }
 
 const Table: React.FC<TableProps> = ({
@@ -23,6 +25,7 @@ const Table: React.FC<TableProps> = ({
     indexMobileDismiss,
     firstRenderElementKeys,
     pagination = true,
+    href,
 }) => {
     const [page, setPage] = useState(1);
     const totalPages = 6;
@@ -48,37 +51,31 @@ const Table: React.FC<TableProps> = ({
                         ))}
                     </div>
 
-                    {data.map((row, rowIndex) => (
-                        <div
-                            key={rowIndex}
-                            className='grid gap-4 items-center justify-between rounded-2xl border border-white-200 overflow-hidden px-4 llg:px-[30px] py-[9px] llg:py-[14px]'
-                            style={{
-                                gridTemplateColumns,
-                            }}
-                        >
-                            {Object.keys(row).map((key, i) => {
-                                const value = row[key];
-                                const isNode = typeof value === 'object';
-
-                                if (isNode) {
-                                    return (
-                                        <Fragment key={`${key}-${i}`}>
-                                            {value}
-                                        </Fragment>
-                                    );
-                                }
-                                return (
-                                    <ThemedText
-                                        key={`${key}-${i}`}
-                                        type='panel-table-header'
-                                        className='whitespace-nowrap max-[1420px]:truncate'
-                                    >
-                                        {value}
-                                    </ThemedText>
-                                );
-                            })}
-                        </div>
-                    ))}
+                    {data.map((row, rowIndex) => {
+                        if (href) {
+                            return (
+                                <Link
+                                    key={`${href}-${rowIndex}`}
+                                    href={`${href}${rowIndex}`}
+                                >
+                                    <Column
+                                        row={row}
+                                        gridTemplateColumns={
+                                            gridTemplateColumns
+                                        }
+                                    />
+                                </Link>
+                            );
+                        } else {
+                            return (
+                                <Column
+                                    key={rowIndex}
+                                    row={row}
+                                    gridTemplateColumns={gridTemplateColumns}
+                                />
+                            );
+                        }
+                    })}
                 </div>
                 {/* Mobile */}
                 <div className='md:hidden flex flex-col gap-[10px]'>
@@ -149,3 +146,37 @@ const Table: React.FC<TableProps> = ({
 };
 
 export default Table;
+
+interface ColumnType {
+    gridTemplateColumns: string;
+    row: RowData;
+}
+
+const Column = ({ gridTemplateColumns, row }: ColumnType) => {
+    return (
+        <div
+            className='grid gap-4 items-center justify-between rounded-2xl border border-white-200 overflow-hidden px-4 llg:px-[30px] py-[9px] llg:py-[14px]'
+            style={{
+                gridTemplateColumns,
+            }}
+        >
+            {Object.keys(row).map((key, i) => {
+                const value = row[key];
+                const isNode = typeof value === 'object';
+
+                if (isNode) {
+                    return <Fragment key={`${key}-${i}`}>{value}</Fragment>;
+                }
+                return (
+                    <ThemedText
+                        key={`${key}-${i}`}
+                        type='panel-table-header'
+                        className='whitespace-nowrap max-[1420px]:truncate'
+                    >
+                        {value}
+                    </ThemedText>
+                );
+            })}
+        </div>
+    );
+};

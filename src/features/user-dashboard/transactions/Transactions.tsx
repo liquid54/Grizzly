@@ -5,6 +5,7 @@ import CustomSelect from '@/components/ui/select';
 import React from 'react';
 import { data, header } from '../components/table/mockTransactionsData';
 import Table from '../components/table/Table';
+import { Pages } from '@/constants/pages';
 
 const Transactions = () => {
     return (
@@ -51,6 +52,7 @@ const Transactions = () => {
                 data={data}
                 gridTemplateColumns='135px 70px 50px 80px 120px 180px 50px'
                 firstRenderElementKeys={['currency', 'status']}
+                href={Pages.USER_PANEL_TRANSACTION}
             />
         </div>
     );

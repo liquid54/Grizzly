@@ -24,6 +24,7 @@ const HomePage = () => {
                                 <ThemedText type="heading">Cryptocurrency</ThemedText>
                                 <ThemedText type="heading">Instantly</ThemedText>
                             </div>
+
                             <ThemedText>
                                 Lorem ipsum dolor sit amet consectetur. Pellentesque est cursus pretium ut egestas.
                                 Viverra pellentesque elementum tristique nibh urna bibendum sollicitudin elit bibendum.

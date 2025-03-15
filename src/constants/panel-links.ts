@@ -1,4 +1,4 @@
-import { Pages } from '@/constants/pages';
+import {Pages} from '@/constants/pages';
 
 export const USER_MENU_LINKS = [
     {

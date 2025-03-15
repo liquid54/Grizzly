@@ -41,9 +41,10 @@ const Exchange = ({
                     </>
                 )}
 
-                <div className="flex justify-center">
+                <div className="flex justify-center items-center">
                     <button className='flex items-center justify-center w-[52px] h-[52px] bg-blue-100 rounded-full'>
-                        <Change/></button>
+                        <Change/>
+                    </button>
                 </div>
 
                 <div className={`${fullWindow ? 'flex flex-row gap-[20px]' : 'space-y-[20px]'}`}>

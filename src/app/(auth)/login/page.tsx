@@ -30,7 +30,6 @@ const SignUp = () => {
                     <Input label={'Password*'} placeholder={'Write your password'} className="w-full"/>
                     <ThemedText type='link_text'>Show password</ThemedText>
                 </div>
-
                 <Link href='/login' className='pt-[10px]'><Button size='mid_large'>Log In</Button></Link>
             </div>
         </div>

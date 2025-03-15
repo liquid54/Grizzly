@@ -29,7 +29,7 @@ const SettingsMenuButton = ({
             onClick={onClick}
         >
             <div
-                className={`w-[46px] h-[46px] lg:w-[70px] lg:h-[70px] transition flex justify-center items-center rounded-2xl lg:rounded-xl ${isActive ? 'bg-blue-300' : 'border border-gray-100'}`}
+                className={`w-[46px] h-[46px] lg:w-[70px] lg:h-[70px] transition flex justify-center items-center rounded-2xl lg:rounded-xl ${isActive ? 'bg-blue-300' : 'border border-white-200'}`}
             >
                 <Image width={width} height={height} src={src} alt={label} />
             </div>

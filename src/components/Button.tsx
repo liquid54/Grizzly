@@ -35,7 +35,7 @@ const Button = ({
         large: 'h-[48px] w-[358px] rounded-[90px]',
         mid_large: 'h-[63px] w-[263px] rounded-[18px]',
         medium: 'h-[48px] sm:h-[63px] w-[209px] rounded-[90px] sm:rounded-[18px]',
-        small: 'h-[51px] w-[136px] rounded-[14px]',
+        small: 'w-full h-[48px] sm:h-[51px] sm:w-[136px] rounded-[90px] sm:rounded-[14px]',
         tiny: 'h-[51px] w-[51px] rounded-[14px]',
     };
 

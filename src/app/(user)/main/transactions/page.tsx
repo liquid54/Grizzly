@@ -1,4 +1,6 @@
+import Transactions from '@/features/user-dashboard/transactions/Transactions';
+
 const TransactionsPage = () => {
-    return <h1>transactions</h1>;
+    return <Transactions />;
 };
 export default TransactionsPage;

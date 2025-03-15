@@ -1,10 +1,10 @@
-import About from "@/components/features/aboutUs/page";
+import About from "@/features/aboutUs/page";
 
 
 const AboutPage = () => {
     return (
         <>
-            <About></About>
+            <About/>
         </>
     );
 }

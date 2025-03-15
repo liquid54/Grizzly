@@ -1,8 +1,8 @@
 import {ThemedText} from "@/components/ThemedText";
 import Button from "@/components/Button";
 import Image from "next/image";
-import Exchange from "@/components/features/Exchange/Exchange";
-import ExchangeList from "@/components/features/Exchange/ExchangeList";
+import Exchange from "@/components/exchange/Exchange";
+import ExchangeList from "@/components/exchange/ExchangeList";
 import AboutUs from "@/components/Main/AboutUs";
 import Link from "next/link";
 
@@ -13,13 +13,11 @@ const HomePage = () => {
     return (
         <>
             <div className=''>
-
                 <div className="relative w-full overflow-hidden">
                     {/* SVG Background Circles */}
                     <BackgroundCircles/>
                     {/* Основний контент */}
-                    <div
-                        className="flex flex-row justify-between space-x-[189px] relative pt-[158px] pb-[272px] z-10 px-[250px]">
+                    <div className="flex flex-row justify-between z-10 space-x-[119px] relative lg:pt-[158px] lg:pb-[272px] lg:px-[250px] md:pt-[211px] pb-[297px] px-[32px]">
                         <div className="flex flex-col space-y-[16px] z-10 justify-center">
                             <div className="flex flex-col space-y-[16px]">
                                 <ThemedText type="heading_blue">Buy and Sell</ThemedText>
@@ -38,15 +36,15 @@ const HomePage = () => {
                             width={1920}
                             height={1080}
                             src="/IMG_5815 (1).png"
-                            alt="Ведмідь в худі Balenciaga"
-                            className="object-cover w-[566px] h-[566px] rounded-full"
+                            alt="IMG_5815(1)"
+                            className="object-cover lg:w-[566px] lg:h-[566px] md:w-[378px] md:h-[378px] rounded-full"
                         />
                     </div>
                 </div>
 
 
                 <div className='pt-[133px] flex gap-x-[53px] justify-center items-center'>
-                    <Exchange fullWidthButton={true} visibleBorder={true}/>
+                    <Exchange fullWidthButton={true} visibleBorder={true} buttonLink={'/exchangeconfirm'}/>
                     <ThemedText type='title' className='text-wrap'>Cryptocurrency Exchange</ThemedText>
                 </div>
             </div>

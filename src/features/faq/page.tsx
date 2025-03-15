@@ -1,5 +1,5 @@
-import TermsOfUse from "@/components/features/FAQ/TermsOfUse";
-import FAQ from "@/components/features/FAQ/FAQ";
+import TermsOfUse from "@/features/faq/TermsOfUse";
+import FAQ from "@/features/faq/FAQ";
 
 const Faq = () => {
     return (

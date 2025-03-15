@@ -1,24 +1,30 @@
 /* Перемістити всі імпорти на початок файлу */
 @import url('https://fonts.googleapis.com/css2?family=Unbounded');
 @import url('https://fonts.googleapis.com/css2?family=Poppins');
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
     --color-amber-100: oklch(0.967 0.003 264.542);
-    --color-cyan: #29BBDF;
-    --color-cyan-dark: #008AAC;
-    --color-dark-brown: #1E1E1E;
-    --color-new-gey: #A1A1A5;
+    --color-cyan: #29bbdf;
+    --color-cyan-dark: #008aac;
+    --color-blue-300: #b6e9f6;
+    --color-dark-brown: #1e1e1e;
+    --color-new-gey: #a1a1a5;
+    --color-gray-100: #cfcedb;
     --color-new-white: #ffffff;
-    --color-light-red: #F0101B;
-    --color-light-gey: #CFCEDB;
+    --color-light-red: #f0101b;
+    --color-light-gey: #cfcedb;
+    --color-overlay: #01020e66;
 
     /* Font variables */
     --font-unbounded: 'Unbounded';
     --font-poppins: 'Poppins';
+
+    --header-shadow:            
+;
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
     --acme-canvas-color: oklch(0.21 0.034 264.665);
 }
 
@@ -26,13 +32,21 @@
     --color-canvas: var(--acme-canvas-color);
     --color-blue-100: var(--color-cyan);
     --color-blue-200: var(--color-cyan-dark);
+    --color-blue-300: var(--color-blue-300);
     --color-brown-100: var(--color-dark-brown);
     --color-white-300: var(--color-new-gey);
     --color-white-200: var(--color-light-gey);
     --color-white-100: var(--color-new-white);
     --color-red-100: var(--color-light-red);
+    --color-gray-100: var(--color-gray-100);
+    --color-dark-50: var(--color-overlay);
 
     /* Font theme variables */
     --font-unbounded: var(--font-unbounded);
     --font-poppins: var(--font-poppins);
+
+    --shadow-header: 0px 2px 11.7px -2px #00000026;
+
+    --breakpoint-xs: 25.875rem;
+    --breakpoint-lg: 64.0625rem;
 }

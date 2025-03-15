@@ -15,12 +15,13 @@
     --color-light-red: #f0101b;
     --color-light-gey: #cfcedb;
     --color-overlay: #01020e66;
+    --color-light-grey: #B9BEC9;
 
     /* Font variables */
     --font-unbounded: 'Unbounded';
     --font-poppins: 'Poppins';
 
-    --header-shadow:            
+    --header-shadow:
 ;
 }
 
@@ -39,6 +40,8 @@
     --color-white-100: var(--color-new-white);
     --color-red-100: var(--color-light-red);
     --color-gray-100: var(--color-gray-100);
+    --color-gray-200: var(--color-light-grey);
+
     --color-dark-50: var(--color-overlay);
 
     /* Font theme variables */

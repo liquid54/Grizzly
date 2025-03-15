@@ -6,7 +6,7 @@ import React from 'react';
 
 const UserOverview = () => {
     return (
-        <div className='w-full flex flex-col md:flex-row md:items-center justify-between rounded-2xl lg:border lg:border-gray-100 gap-8 md:gap-4 2xl:gap-8 lg:px-[30px] lg:py-[22px]'>
+        <div className='w-full flex flex-col md:flex-row md:items-center justify-between rounded-2xl lg:border lg:border-white-200 gap-8 md:gap-4 2xl:gap-8 lg:px-[30px] lg:py-[22px]'>
             <div className='flex items-center md:flex-col md:items-start shrink-0 gap-5 md:gap-[10px] llg:gap-5 llg:flex-row llg:items-center'>
                 <Avatar
                     className='w-[80px] h-[80px] md:w-[90px] md:h-[90px] xl:w-[110px] xl:h-[110px]'

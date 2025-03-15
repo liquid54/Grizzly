@@ -11,7 +11,6 @@
     --color-dark-brown: #1e1e1e;
     --color-dark-100: #070a29;
     --color-new-gey: #a1a1a5;
-    --color-gray-100: #cfcedb;
     --color-gray-200: #8a8b8e;
     --color-gray-300: #f6f6f8;
     --color-new-white: #ffffff;
@@ -39,7 +38,6 @@
     --color-white-200: var(--color-light-gey);
     --color-white-100: var(--color-new-white);
     --color-red-100: var(--color-light-red);
-    --color-gray-100: var(--color-gray-100);
     --color-gray-200: var(--color-gray-200);
     --color-gray-300: var(--color-gray-300);
     --color-dark-50: var(--color-overlay);

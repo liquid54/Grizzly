@@ -11,11 +11,11 @@ interface MenuProps extends OpenMenuProps {
 const BurgerMenuWrapper = ({ isOpen, setIsOpen, children }: MenuProps) => {
     return (
         <div
-            className={`absolute top-0 left-0 h-full  lg:w-fit lg:bg-none ${isOpen ? 'bg-dark-50 w-full' : 'bg-none w-0'}`}
+            className={`fixed z-50 top-0 left-0 h-full  lg:w-fit lg:bg-none ${isOpen ? 'bg-dark-50 w-full' : 'bg-none w-0'}`}
             onClick={setIsOpen}
         >
             <div
-                className={`transition-transform duration-300 h-full w-full xs:w-80 lg:w-[133px] lg:border-r lg:border-gray-100 lg:flex flex-col items-center gap-[30px] bg-white pt-4 px-4 pb-12 sm:py-[30px] sm:px-[32px] sm:pt-[40px] lg:px-[30px] ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0 overflow-hidden'}`}
+                className={`transition-transform duration-300 h-full w-full xs:w-80 lg:w-[133px] lg:border-r lg:border-white-200 lg:flex flex-col items-center gap-[30px] bg-white pt-4 px-4 pb-12 sm:py-[30px] sm:px-[32px] sm:pt-[40px] lg:px-[30px] ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0 overflow-hidden'}`}
                 onClick={e => e.stopPropagation()}
             >
                 <div className='flex items-center sm:justify-between h-[52px]'>

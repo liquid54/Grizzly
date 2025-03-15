@@ -13,6 +13,7 @@ type InputProps = {
     className?: string;
     label?: string;
     showCopyIcon?: boolean;
+    resendText?: string; // Новий проп для змінного тексту
 };
 
 const Input = ({
@@ -24,6 +25,7 @@ const Input = ({
                    className = '',
                    label,
                    showCopyIcon = false,
+                   resendText, // Динамічний текст
                    ...props
                }: InputProps) => {
     let typeDefaultValue = "";
@@ -49,9 +51,9 @@ const Input = ({
     }
 
     return (
-        <div className="flex flex-col space-y-[6px] w-full">
+        <div className="flex flex-col space-y-[6px] w-full max-w-[500px]">
             {label && (
-                <ThemedText type='subtitle' >
+                <ThemedText type='subtitle'>
                     {label}
                 </ThemedText>
             )}
@@ -71,6 +73,13 @@ const Input = ({
                     </div>
                 )}
             </div>
+
+            {/* Відображаємо динамічний текст, якщо він є */}
+            {resendText && (
+                <ThemedText type='link_text' className="text-left">
+                    {resendText}
+                </ThemedText>
+            )}
         </div>
     );
 };

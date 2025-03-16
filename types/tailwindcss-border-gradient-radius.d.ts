@@ -1,1 +1,0 @@
-declare module 'tailwindcss-border-gradient-radius';

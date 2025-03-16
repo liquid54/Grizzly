@@ -42,3 +42,17 @@ export const USER_MENU_LINKS = [
         height: 18.3,
     },
 ];
+
+export const MAIN_MENU_LINKS = [
+    {label: 'Main',
+    href: Pages.HOME,
+},
+{
+    label: 'Transactions',
+    href: Pages.ABOUT,
+},
+{
+    label: 'Exchange',
+    href: Pages.FAQ,
+}
+]

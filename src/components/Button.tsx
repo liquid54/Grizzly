@@ -23,8 +23,7 @@ const Button = ({
     const baseStyles = '';
 
     const variantStyles = {
-        primary:
-            'bg-gradient-to-br from-blue-100 to-blue-200 border-none text-white',
+        primary: 'bg-gradient-to-br from-blue-100 to-blue-200 border-none text-white',
         secondary: 'bg-white border-[2px] border-blue-200 text-blue-200',
         red: 'border-2 border-red-100 bg-white text-red-100',
         social: 'bg-[#31A8E0] text-white',

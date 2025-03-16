@@ -22,7 +22,7 @@ const Referrals = () => {
                     <div className='w-full sm:w-fit flex flex-col gap-4 md:gap-4 lg:gap-5'>
                         <ThemedText
                             type='title_poppins'
-                            className='text-[24px] lg:text-[34px]'
+                            className='text-[24px] lg:text-[34px] leading-none'
                         >
                             My referrals
                         </ThemedText>

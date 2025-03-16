@@ -13,7 +13,7 @@ const Transactions = () => {
             <div className='w-full flex flex-col gap-4 md:gap-[10px] lg:gap-5'>
                 <ThemedText
                     type='title_poppins'
-                    className='text-[24px] lg:text-[34px]'
+                    className='text-[24px] lg:text-[34px] leading-none'
                 >
                     Transactions
                 </ThemedText>

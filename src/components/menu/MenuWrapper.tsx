@@ -9,11 +9,12 @@ interface MenuProps extends OpenMenuProps {
     isMain?: boolean;
 }
 const BurgerMenuWrapper = ({
-                               isOpen,
-                               setIsOpen,
-                               children,
-                               isMain = true,
-                           }: MenuProps) => {
+
+    isOpen,
+    setIsOpen,
+    children,
+    isMain = true,
+}: MenuProps) => {
     return (
         <div
             className={`fixed z-50 top-0 left-0 h-full ${isMain ? 'lg:w-fit lg:bg-none' : 'md:bg-none'}  ${isOpen ? 'bg-dark-50 w-full' : 'bg-none w-0'}`}

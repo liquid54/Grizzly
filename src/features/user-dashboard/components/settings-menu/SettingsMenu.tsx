@@ -17,8 +17,12 @@ const SettingsMenu = ({ isOpen, setIsOpen }: OpenMenuProps) => {
                         <SettingsMenuButton
                             onClick={setIsOpen}
                             key={`panel-${l.label}-${i}`}
-                            href={l.href}
-                            label={l.label}
+                            {...l}
+                            src={
+                                currentPage.includes(current)
+                                    ? l.activeSrc
+                                    : l.src
+                            }
                             isActive={currentPage.includes(current)}
                         />
                     );

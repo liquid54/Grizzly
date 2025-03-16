@@ -26,6 +26,8 @@ const LastExchange = () => {
                 data={data}
                 gridTemplateColumns='135px 70px 50px 80px 120px 180px 50px'
                 firstRenderElementKeys={['currency', 'status']}
+                pagination={false}
+                href={Pages.USER_PANEL_TRANSACTION}
             />
             <Link href={Pages.USER_PANEL_EXCHANGE} className='sm:hidden'>
                 <Button variant='secondary' size='small'>

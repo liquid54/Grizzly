@@ -22,6 +22,8 @@ export type textEnum =
     | 'panel-title-blue'
     | 'panel-heading'
     | 'panel-table-header'
+    | 'panel-medium-text'
+    | 'panel-medium-text-blue'
     | 'empty';
 
 export type ThemedTextProps = React.HTMLAttributes<HTMLSpanElement> & {
@@ -59,9 +61,11 @@ export function ThemedText({
         ${type === 'text_button_red' ? 'font-medium text-[18px] text-red-100 font-poppins' : ''}
         ${type === 'panel-text' ? 'font-normal text-[16px] lg:text-[18px] leading-none text-brown-100 font-mont' : ''}
         ${type === 'panel-title' ? 'font-semibold text-[24px] lg:text-[26px] leading-none text-dark-100 font-poppins' : ''}
-        ${type === 'panel-heading' ? 'font-semibold text-[18px] md:text-[24px] lg:text-[34px] text-brown-100 font-poppins' : ''}
-        ${type === 'panel-title-blue' ? 'font-semibold text-[20px] lg:text-[22px] leading-none text-blue-100 font-poppins ' : ''}
+        ${type === 'panel-heading' ? 'font-semibolpanel-medium-textd text-[18px] md:text-[24px] lg:text-[34px] text-brown-100 font-poppins' : ''}
+        ${type === 'panel-title-blue' ? 'font-semibold text-[20px] lg:text-[22px] leading-none text-blue-100 font-poppins' : ''}
         ${type === 'panel-table-header' ? 'font-normal text-[15px] md:text-[12px] leading-none llg:text-[18px] font-poppins' : ''}
+        ${type === 'panel-medium-text' ? 'text-[16px] leading-none font-medium text-brown-100 font-poppins' : ''}
+        ${type === 'panel-medium-text-blue' ? 'text-[16px] font-medium text-blue-100 font-poppins' : ''}
 
         ${type === 'empty' ? '' : ''}
         ${className}`.trim()}

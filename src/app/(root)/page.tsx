@@ -44,7 +44,7 @@ const HomePage = () => {
                             </Link>
                         </div>
 
-                        {/* Десктопна версія (видима тільки на md і більше) */}
+
                         <div className="hidden md:block">
                             <Link href="/exchange">
                                 <Button variant="primary" size="medium">Exchange</Button>

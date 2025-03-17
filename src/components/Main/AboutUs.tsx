@@ -23,7 +23,7 @@ const AboutUs = () => {
             <div className='flex flex-col md:gap-y-[40px] gap-y-[16px] md:order-first md:max-w-[440px] lg:max-w-[570px] lg:py-[76.5px] md:py-[50px]'>
                 <div className='flex flex-col md:gap-y-[10px] gap-y-[16px] lg:pt-[10px]'>
                     <ThemedText type='title' className="text-center md:text-left">About us</ThemedText>
-                    <ThemedText>Lorem ipsum dolor sit amet consectetur. Mi cras aliquam dui sagittis id dignissim
+                    <ThemedText type='text-main'>Lorem ipsum dolor sit amet consectetur. Mi cras aliquam dui sagittis id dignissim
                         interdum. Purus sed viverra facilisis bibendum facilisis risus. Diam et diam vel magna arcu.
                         Nisi nulla non dolor rhoncus etiam aliquam. Sit sapien sit posuere at sodales volutpat quisque.
                         Senectus enim ut sed turpis in pretium pharetra morbi. Lacinia sed congue consequat molestie sed

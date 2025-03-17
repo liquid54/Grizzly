@@ -23,7 +23,7 @@ const Header = () => {
             <header className='border-b border-[#B9BEC9]'>
                 <nav className='overflow-visible'>
                     <div
-                        className='px-4 md:px-[32px] py-2 sm:py-3 md:py-4 lg:py-[14px] flex flex-row sm:flex-row md:justify-between lg:justify-center lg:gap-x-[486px]'>
+                        className='px-4 md:px-[32px] py-2 sm:py-3 md:py-4 lg:py-[14px] flex flex-row sm:flex-row md:justify-between lg:justify-between lg:gap-x-[40px] lg:max-w-[1420px] mx-auto'>
                         <MobileHeader isOpen={isOpen} setIsOpen={onOpenSettings} isMain={false}/>
                         <div
                             className='gap-x-[83px] md:flex flex-col sm:flex-col md:flex-row justify-center items-center md:gap-x-[40px] hidden'>

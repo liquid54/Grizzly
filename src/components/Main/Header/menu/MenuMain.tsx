@@ -6,6 +6,7 @@ import SettingsMenuButton from "@/features/user-dashboard/components/settings-me
 import Button from "@/components/Button";
 import LanguageSwitcher from "@/components/User/LanguageSelector";
 import Link from "next/link";
+import SettingsMenuText from "@/components/Main/Header/menu/SettingMenuText";
 
 const SettingsMainMenu = ({isOpen, setIsOpen}: OpenMenuProps) => {
     const pathname = usePathname();
@@ -18,7 +19,7 @@ const SettingsMainMenu = ({isOpen, setIsOpen}: OpenMenuProps) => {
                     {MAIN_MENU_LINKS.map((l, i) => {
                         const current = l.href?.replace('/main/', '') || '';
                         return (
-                            <SettingsMenuButton
+                            <SettingsMenuText
                                 onClick={() => setIsOpen && setIsOpen()}
                                 key={`panel-${l.label}-${i}`}
                                 href={l.href}

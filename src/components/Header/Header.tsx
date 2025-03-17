@@ -29,10 +29,10 @@ const Header = ({ isMain = false }: { isMain?: boolean }) => {
                             isOpen={isOpen}
                             setIsOpen={onOpenSettings}
                         />
-                        <div className='hidden flex-row gap-5 sm:flex'>
+                        <div className='hidden flex-row gap-5 sm:flex items-center'>
                             <LanguageSwitcher />
                             <Link href={''}>
-                                <ButtonTg />
+                                <ButtonTg isMain={true} />
                             </Link>
                             <Link href='/main'>
                                 <Avatar

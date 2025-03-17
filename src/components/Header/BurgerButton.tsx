@@ -4,7 +4,7 @@ import type { OpenMenuProps } from '@/types/main';
 const BurgerButton = ({ isOpen, setIsOpen }: OpenMenuProps) => {
     return (
         <button
-            className='relative cursor-pointer flex flex-col gap-[5.7px] w-[25.5px] h-[16.56px]'
+            className='absolute top-5 left-0  cursor-pointer flex flex-col gap-[5.7px] w-[25.5px] h-[16.56px]'
             onClick={setIsOpen}
         >
             <div

@@ -2,7 +2,7 @@ import { USER_MENU_LINKS } from '@/constants/panel-links';
 import SettingsMenuButton from './SettingMenuButton';
 import { usePathname } from 'next/navigation';
 import MenuWrapper from '@/components/menu/MenuWrapper';
-import {OpenMenuProps} from "@/types/main";
+import { OpenMenuProps } from '@/types/main';
 
 const SettingsMenu = ({ isOpen, setIsOpen }: OpenMenuProps) => {
     const pathname = usePathname();
@@ -17,8 +17,7 @@ const SettingsMenu = ({ isOpen, setIsOpen }: OpenMenuProps) => {
                         <SettingsMenuButton
                             onClick={setIsOpen}
                             key={`panel-${l.label}-${i}`}
-                            href={l.href}
-                            label={l.label}
+                            {...l}
                             isActive={currentPage.includes(current)}
                         />
                     );

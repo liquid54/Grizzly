@@ -1,23 +1,18 @@
-'use client';
+import React from 'react';
+import BurgerButton from './BurgerButton';
+import Link from 'next/link';
+import Avatar from '@/components/Avatar';
 import type { OpenMenuProps } from '@/types/main';
 
-const BurgerButton = ({ isOpen, setIsOpen }: OpenMenuProps) => {
+const MobileHeader = ({ isOpen, setIsOpen }: OpenMenuProps) => {
     return (
-        <button
-            className='relative cursor-pointer flex flex-col gap-[5.7px] w-[25.5px] h-[16.56px]'
-            onClick={setIsOpen}
-        >
-            <div
-                className={`bg-black h-[1.42px] w-[25.5px] transition-transform duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-[8.5px]'}`}
-            />
-            <div
-                className={`bg-black h-[1.42px] w-[25.5px] transition-transform duration-300 ${isOpen ? 'translate-x-[4.25px]' : 'translate-x-[4.25px]'}`}
-            />
-            <div
-                className={`bg-black h-[1.42px] w-[25.5px] transition-transform duration-300 ${isOpen ? 'translate-x-[8.5px]' : 'translate-x-0'}`}
-            />
-        </button>
+        <div className='relative flex-grow gap-0 sm:gap-7 flex justify-center sm:justify-start items-center lg:hidden'>
+            <BurgerButton isOpen={isOpen} setIsOpen={setIsOpen} />
+            <Link href={'/'} className={`sm:ml-12 flex justify-center`}>
+                <Avatar size={52} alt='header logo' src='' />
+            </Link>
+        </div>
     );
 };
 
-export default BurgerButton;
+export default MobileHeader;

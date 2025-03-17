@@ -43,7 +43,7 @@ export function ThemedText({
         ${type === 'heading_blue' ? 'lg:text-[70px] md:text-[50px] text-[35px] font-bold text-blue-100 font-unbounded leading-[100%] tracking-[0%]' : ''}
         ${type === 'title' ? 'lg:text-[52px] text-[35px] font-semibold text-brown-100 font-unbounded' : ''}
         ${type === 'title_poppins' ? 'text-[24px] font-semibold text-brown-100 font-poppins' : ''}
-        ${type === 'subtitle' ? 'text-[20px] font-bold text-brown-100 font-poppins' : ''}
+        ${type === 'subtitle' ? 'text-[18px] sm:text-[20px] font-bold text-brown-100 font-poppins' : ''}
         ${type === 'subtitle_blue' ? 'text-[34px] font-bold text-blue-100 font-unbounded' : ''}
 
         ${type === 'title_exchange' ? 'text-[22px] leading-[20px] font-bold text-brown-100 font-poppins block uppercase' : ''}

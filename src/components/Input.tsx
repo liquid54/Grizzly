@@ -14,6 +14,7 @@ type InputProps = {
     className?: string;
     containerClass?: string;
     label?: string;
+    requiredMark?: string;
     showCopyIcon?: boolean;
     resendText?: string; // Новий проп для змінного тексту
 };
@@ -27,6 +28,7 @@ const Input = ({
     placeholder = '',
     className = '',
     containerClass = '',
+    requiredMark,
     label,
     showCopyIcon = false,
     resendText, // Динамічний текст
@@ -58,7 +60,23 @@ const Input = ({
         <div
             className={`flex flex-col space-y-[6px] w-full max-w-[500px] ${containerClass}`}
         >
-            {label && <ThemedText type='subtitle'>{label}</ThemedText>}
+            {label && (
+                <div className='flex items-center'>
+                    <ThemedText type='subtitle'>
+                        {label}{' '}
+                        {requiredMark ? (
+                            <ThemedText
+                                type='subtitle'
+                                className='text-red-500 leading-none'
+                            >
+                                {requiredMark}
+                            </ThemedText>
+                        ) : (
+                            ''
+                        )}
+                    </ThemedText>
+                </div>
+            )}
             <div
                 className={`relative bg-gray-400 border border-white-200 rounded-[16px] w-full ${className}`}
             >

@@ -39,16 +39,15 @@ export function ThemedText({
     return (
         <span
             className={`
-        ${type === 'heading' ? 'text-[70px] font-bold text-brown-100 font-unbounded leading-[100%] tracking-[0%]' : ''}
-        ${type === 'heading_blue' ? 'text-[70px] font-bold text-blue-100 font-unbounded leading-[100%] tracking-[0%]' : ''}
-        ${type === 'title' ? 'text-[52px] font-semibold text-brown-100 font-unbounded' : ''}
+        ${type === 'heading' ? 'lg:text-[70px] md:text-[50px] text-[35px] font-bold text-brown-100 font-unbounded leading-[100%] tracking-[0%]' : ''}
+        ${type === 'heading_blue' ? 'lg:text-[70px] md:text-[50px] text-[35px] font-bold text-blue-100 font-unbounded leading-[100%] tracking-[0%]' : ''}
+        ${type === 'title' ? 'lg:text-[52px] text-[35px] font-semibold text-brown-100 font-unbounded' : ''}
         ${type === 'title_poppins' ? 'text-[24px] font-semibold text-brown-100 font-poppins' : ''}
         ${type === 'subtitle' ? 'text-[20px] font-bold text-brown-100 font-poppins' : ''}
         ${type === 'subtitle_blue' ? 'text-[34px] font-bold text-blue-100 font-unbounded' : ''}
 
         ${type === 'title_exchange' ? 'text-[22px] leading-[20px] font-bold text-brown-100 font-poppins block uppercase' : ''}
         ${type === 'text_exchange' ? 'text-[16px] leading-[20px] font-medium text-brown-100 font-poppins block uppercase' : ''}
-        
         
         ${type === 'text' ? 'text-[16px] sm:text-[18px] text-brown-100 font-poppins' : ''}
         ${type === 'text_blue' ? 'text-[18px] font-bold text-blue-100 font-poppins' : ''}

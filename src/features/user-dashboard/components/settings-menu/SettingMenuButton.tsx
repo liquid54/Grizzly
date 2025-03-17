@@ -5,27 +5,27 @@ import { ThemedText } from '@/components/ThemedText';
 
 interface SettingsButtonProps {
     href: string;
-    src: string;
     isActive: boolean;
     label: string;
+    onClick?: () => void;
+    src: string;
     width: number;
     height: number;
-    onClick?: () => void;
 }
 
 const SettingsMenuButton = ({
     href,
-    src,
     label,
     isActive,
+    onClick,
+    src,
     width,
     height,
-    onClick,
 }: SettingsButtonProps) => {
     return (
         <Link
             href={href}
-            className={`flex items-center gap-4`}
+            className={`flex items-center gap-4 ${isActive ? 'text-blue-300' : ''}`}
             onClick={onClick}
         >
             <div

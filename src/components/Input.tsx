@@ -60,13 +60,13 @@ const Input = ({
         >
             {label && <ThemedText type='subtitle'>{label}</ThemedText>}
             <div
-                className={`relative bg-[#F0F0F3] border border-[#CFCEDB] rounded-[16px] w-full ${className}`}
+                className={`relative bg-gray-400 border border-white-200 rounded-[16px] w-full ${className}`}
             >
                 <input
                     type={inputType}
                     value={inputValue}
                     onChange={handleInputChange}
-                    className={`w-full px-[14px] sm:px-[31px] ${showCopyIcon ? 'pr-[60px]' : ''} py-[11px] sm:py-[21px] text-[16px] sm:text-[24px] font-semibold placeholder:font-normal outline-none bg-transparent rounded-[14px] sm:rounded-[16px]`}
+                    className={`w-full px-[14px] sm:px-[31px] ${showCopyIcon ? 'pr-[60px]' : ''} py-[11px] sm:py-[21px] text-[16px] sm:text-[24px] font-semibold placeholder:font-normal placeholder:text-white-300 outline-none bg-transparent rounded-[14px] sm:rounded-[16px]`}
                     placeholder={placeholder}
                     {...props}
                 />

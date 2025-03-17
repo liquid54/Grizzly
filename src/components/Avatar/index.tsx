@@ -12,9 +12,8 @@ const Avatar = ({ size = 70, alt, src, className, ...props }: AvatarProps) => {
     const image = src || '/IMG_5815 (1).png';
     return (
         <Image
-            className={`rounded-full overflow-hidden object-cover shrink-0 ${className || ''}`}
+            className={`rounded-full overflow-hidden object-contain shrink-0 ${className || ''}`}
             alt={alt}
-            objectFit='cover'
             height={size}
             width={size}
             src={image}

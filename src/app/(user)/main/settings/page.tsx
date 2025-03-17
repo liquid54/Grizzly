@@ -1,4 +1,6 @@
+import Settings from '@/features/user-dashboard/settings/Settings';
+
 const SettingsPage = () => {
-    return <h1>settings</h1>;
+    return <Settings />;
 };
 export default SettingsPage;

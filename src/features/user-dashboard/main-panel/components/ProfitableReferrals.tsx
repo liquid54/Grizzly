@@ -28,6 +28,7 @@ const ProfitableReferrals = () => {
                 data={data}
                 gridTemplateColumns='135px 110px 130px 110px 150px 120px'
                 firstRenderElementKeys={['referral', 'telegram']}
+                pagination={false}
             />
             <Link href={Pages.USER_PANEL_REFERRALS} className='sm:hidden'>
                 <Button variant='secondary' size='small'>

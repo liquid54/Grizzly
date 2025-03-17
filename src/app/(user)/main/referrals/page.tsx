@@ -1,4 +1,6 @@
+import Referrals from '@/features/user-dashboard/referrals/Referrals';
+
 const ReferralsPage = () => {
-    return <h1>referrals</h1>;
+    return <Referrals />;
 };
 export default ReferralsPage;

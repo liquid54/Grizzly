@@ -2,19 +2,19 @@ import Link from 'next/link';
 import React from 'react';
 import { ThemedText } from '@/components/ThemedText';
 
-interface SettingsTextProps {
+interface SettingsButtonProps {
     href: string;
     isActive: boolean;
     label: string;
     onClick?: () => void;
 }
 
-const SettingsMenuText = ({
+const SettingsMenuButton = ({
                                 href,
                                 label,
                                 isActive,
                                 onClick,
-                            }: SettingsTextProps) => {
+                            }: SettingsButtonProps) => {
     return (
         <Link
             href={href}
@@ -26,4 +26,4 @@ const SettingsMenuText = ({
     );
 };
 
-export default SettingsMenuText;
+export default SettingsMenuButton;

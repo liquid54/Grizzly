@@ -24,6 +24,7 @@ export type textEnum =
     | 'panel-table-header'
     | 'panel-medium-text'
     | 'panel-medium-text-blue'
+    | 'text-footer'
     | 'empty';
 
 export type ThemedTextProps = React.HTMLAttributes<HTMLSpanElement> & {
@@ -65,7 +66,9 @@ export function ThemedText({
         ${type === 'panel-table-header' ? 'font-normal text-[15px] md:text-[12px] leading-none llg:text-[18px] font-poppins' : ''}
         ${type === 'panel-medium-text' ? 'text-[16px] leading-none font-medium text-brown-100 font-poppins' : ''}
         ${type === 'panel-medium-text-blue' ? 'text-[16px] font-medium text-blue-100 font-poppins' : ''}
-
+        ${type === 'text-footer' ? 'text-[15px] text-brown-100 font-poppins' : ''}
+        
+        
         ${type === 'empty' ? '' : ''}
         ${className}`.trim()}
             {...rest}

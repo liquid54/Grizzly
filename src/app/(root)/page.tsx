@@ -11,7 +11,7 @@ import Link from "next/link";
 
 const HomePage = () => {
     return (
-        <div className='overflow-hidden'>
+        <div className='overflow-hidden pb-[100px] lg:pb-[150px]'>
             {/* Основний контент */}
             <div className='md:overflow-hidden lg:overflow-visible'>
                 <div className="flex flex-col items-center px-[16px] pt-[100px] gap-y-[59px] md:flex-row relative lg:px-[250px] lg:pt-[158px] lg:pb-[272px] md:pt-[211px] md:gap-x-[123px] md:px-[32px]">
@@ -60,7 +60,7 @@ const HomePage = () => {
             </div>
 
             <ExchangeList/>
-            <div className='lg:px-[370px] md:px-[32px] lg:py-[150px] md:py-[51px] py-[80px] px-[50px]'>
+            <div className='lg:max-w-[1180px] md:max-w-[960px] md:mx-auto md:px-[32px] px-4'>
                 <AboutUs/>
             </div>
         </div>

@@ -8,7 +8,7 @@ import ButtonTg from "@/components/ButtonTG";
 const Footer = () => {
     return (
         <footer className='bg-[#F0F0F3]'>
-            <div className='px-[15px] py-[20px] flex flex-col justify-center gap-y-[50px] md:px-[32px] md:py-[21px] lg:px-[250px]'>
+            <div className='px-[15px] py-[20px] flex flex-col justify-center gap-y-[50px] md:px-[32px] md:py-[21px] max-w-[1420px] mx-auto'>
                 <div className='flex flex-col gap-y-[30px] items-center md:flex-row md:justify-between'>
                     <div className='flex flex-col gap-y-[40px] justify-center items-center md:flex-row md:gap-x-[60px] lg:gap-x-[125px]'>
                         <Image
@@ -32,7 +32,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className='flex justify-center items-center w-full'>
-                    <ThemedText>Cobra Exchange 2025 All Rights reserved</ThemedText>
+                    <ThemedText type='text-footer'>Cobra Exchange 2025 All Rights reserved</ThemedText>
                 </div>
             </div>
         </footer>

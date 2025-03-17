@@ -9,7 +9,6 @@ interface MenuProps extends OpenMenuProps {
     isMain?: boolean;
 }
 const BurgerMenuWrapper = ({
-
     isOpen,
     setIsOpen,
     children,

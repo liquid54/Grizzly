@@ -25,7 +25,7 @@ const Confirm = () => {
                 </div>
                 <ThemedText className='text-gray-200 text-center'>
                     To continue, you must complete all of the verifications
-                    {/* listed below. */}
+                    listed below.
                 </ThemedText>
             </div>
 

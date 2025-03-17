@@ -1,17 +1,18 @@
-'use client';
+import React from 'react';
+import BurgerButton from './BurgerButton';
+import Link from 'next/link';
+import Avatar from '@/components/Avatar';
 import type { OpenMenuProps } from '@/types/main';
 
-const BurgerButton = ({ isOpen, setIsOpen }: OpenMenuProps) => {
+const MobileHeader = ({ isOpen, setIsOpen }: OpenMenuProps) => {
     return (
-
-        <div className='flex-grow gap-0 sm:gap-7 flex items-center justify-center sm:justify-start lg:hidden'>
+        <div className='relative flex-grow gap-0 sm:gap-7 flex justify-center sm:justify-start items-center lg:hidden'>
             <BurgerButton isOpen={isOpen} setIsOpen={setIsOpen} />
-            <Link href={'/'} className='flex sm:ml-12 justify-center'>
+            <Link href={'/'} className={`sm:ml-12 flex justify-center`}>
                 <Avatar size={52} alt='header logo' src='' />
             </Link>
         </div>
-
     );
 };
 
-export default BurgerButton;
+export default MobileHeader;

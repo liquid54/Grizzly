@@ -28,6 +28,7 @@ const CustomSelect = ({ title, classes }: SelectProps) => {
                         className={`bg-white border border-white-200  w-full max-w-full rounded-lg shadow-md z-[9999] ${classes?.content}`}
                         position='popper'
                         sideOffset={4}
+                        style={{ width: 'var(--radix-select-trigger-width)' }}
                     >
                         <Select.Viewport className='p-2'>
                             <Select.Item

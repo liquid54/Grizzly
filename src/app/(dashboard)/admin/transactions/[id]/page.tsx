@@ -1,4 +1,6 @@
+import Transaction from '@/features/admin-dashboard/orders/components/Transaction';
+
 const TransactionPage = () => {
-    return <h1>transaction</h1>;
+    return <Transaction />;
 };
 export default TransactionPage;

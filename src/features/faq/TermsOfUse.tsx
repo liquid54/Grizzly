@@ -45,9 +45,9 @@ const TermsOfUse = ()=> {
     ];
 
     return (
-        <div className="flex flex-col justify-center space-y-[50px] pb-[100px]">
+        <div className="flex flex-col lg:max-w-[1168px] lg:mx-auto space-y-[50px]">
             <div className="flex justify-center">
-                <ThemedText type='title_poppins' className='text-[36px]'>Terms of Use for the Cryptocurrency Exchange Service</ThemedText>
+                <ThemedText type='title_terms' className='text-center'>Terms of Use for the Cryptocurrency Exchange Service</ThemedText>
             </div>
 
             <div className="space-y-[50px]">
@@ -60,9 +60,7 @@ const TermsOfUse = ()=> {
             </div>
 
             <div className="flex justify-center">
-                <Button>
-                    Exchange
-                </Button>
+                <Button size='xl'>Exchange</Button>
             </div>
         </div>
     );

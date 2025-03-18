@@ -9,8 +9,11 @@ export type textEnum =
     | 'title_currency'
     | 'title_about'
     | 'title_card_about'
+    | 'title_faq'
+    | 'title_terms'
     | 'subtitle'
     | 'subtitle_blue'
+    | 'subtitle_faq'
     | 'text'
     | 'text_blue'
     | 'link_text'
@@ -39,10 +42,10 @@ export type ThemedTextProps = React.HTMLAttributes<HTMLSpanElement> & {
 };
 
 export function ThemedText({
-    type = 'text',
-    className = '',
-    ...rest
-}: ThemedTextProps) {
+                               type = 'text',
+                               className = '',
+                               ...rest
+                           }: ThemedTextProps) {
     return (
         <span
             className={`
@@ -82,9 +85,10 @@ export function ThemedText({
         ${type === 'title_card_about' ? 'md:text-[36px] text-[24px] font-bold text-brown-100 font-unbounded' : ''}
         ${type === 'text_card_about' ? 'text-[16px] font-normal font-poppins' : ''}
         
+        ${type === 'title_faq' ? 'md:text-[36px] text-[24px] font-semibold text-brown-100 font-unbounded' : ''}
+        ${type === 'title_terms' ? 'md:text-[36px] text-[24px] font-semibold text-brown-100 lg:font-poppins font-unbounded' : ''}
+        ${type === 'subtitle_faq' ? 'md:text-[24px] text-[15px] font-semibold text-brown-100 font-poppins' : ''}
 
-
-        
         ${type === 'empty' ? '' : ''}
         ${className}`.trim()}
             {...rest}

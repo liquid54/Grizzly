@@ -1,9 +1,10 @@
 // components/FAQ.js
 import React from 'react';
 import {ThemedText} from "@/components/ThemedText";
+import Arrow from "@/assets/icons/Arrow";
 
-const FAQ = ()=> {
-    // Масив з FAQ
+const FAQ = () => {
+
     const faqItems = [
         {
             question: "How does your cryptocurrency exchange service work?",
@@ -38,14 +39,16 @@ const FAQ = ()=> {
     ];
 
     return (
-        <div className="space-y-[50px]">
+        <div className="lg:max-w-[1170px] lg:mx-auto space-y-[50px]">
             <div className='flex justify-center'>
-                <ThemedText type='title' className='text-[36px]'>Frequently asked questions</ThemedText>
+                <ThemedText type='title_faq'>Frequently asked questions</ThemedText>
             </div>
             <div className="space-y-4">
                 {faqItems.map((item, index) => (
-                    <div key={index} className="p-[22px] border border-white-200 rounded-[24px]">
-                        <ThemedText type='title_poppins'>{item.question}</ThemedText>
+                    <div key={index} className="flex flex-row justify-between p-[22px] items-center border border-white-200 rounded-[24px]">
+                        <ThemedText type='subtitle_faq'>{item.question}</ThemedText>
+                        <Arrow className="fill-black"/>
+
                     </div>
                 ))}
             </div>
@@ -54,3 +57,4 @@ const FAQ = ()=> {
 }
 
 export default FAQ
+//<ThemedText type='title_poppins'>{item.question}</ThemedText>

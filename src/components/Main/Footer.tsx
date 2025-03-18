@@ -8,7 +8,7 @@ import ButtonTg from "@/components/ButtonTG";
 const Footer = () => {
     return (
         <footer className='bg-[#F0F0F3]'>
-            <div className='px-[15px] py-[20px] flex flex-col justify-center gap-y-[50px] md:px-[32px] md:py-[21px] max-w-[1420px] mx-auto'>
+            <div className='px-[15px] py-[20px] flex flex-col justify-center md:gap-y-[10px] gap-y-[50px] md:px-[32px] md:py-[21px] max-w-[1420px] mx-auto'>
                 <div className='flex flex-col gap-y-[30px] items-center md:flex-row md:justify-between'>
                     <div className='flex flex-col gap-y-[40px] justify-center items-center md:flex-row md:gap-x-[60px] lg:gap-x-[125px]'>
                         <Image

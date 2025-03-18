@@ -8,8 +8,8 @@ import Link from 'next/link';
 
 const Exchange = ({
     fullWidthButton = false,
-    visibleBorder = false,
     fullWindow = false,
+    visibleBorder = false,
     buttonLink = '',
     ...props
 }) => {
@@ -18,10 +18,10 @@ const Exchange = ({
             className={`flex flex-col ${visibleBorder ? 'md:border md:border-[#CFCEDB] md:rounded-[18px]' : ''}`}
             {...props}
         >
-            <div className=' space-y-[20px]'>
+            <div className=' space-y-[20px] '>
                 {fullWindow ? (
                     <div className='flex flex-col gap-y-[10px]'>
-                        <div className='flex flex-col sm:flex-row gap-[16px] md:gap-[20px]'>
+                        <div className='flex flex-col sm:flex-row  gap-[16px] sm:gap-[20px]'>
                             <Selector
                                 type='crypto'
                                 className='w-full sm:min-w-[405px]'

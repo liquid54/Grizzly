@@ -15,7 +15,7 @@ const ExchangeMain = ({
                     Cryptocurrency Exchange
                 </ThemedText>
             </div>
-            <div>
+            <div className='max-sm:flex justify-center'>
                 <Exchange
                     visibleBorder={visibleBorder}
                     fullWindow={true}

@@ -6,6 +6,9 @@ export type textEnum =
     | 'title'
     | 'title_poppins'
     | 'title_exchange'
+    | 'title_currency'
+    | 'title_about'
+    | 'title_card_about'
     | 'subtitle'
     | 'subtitle_blue'
     | 'text'
@@ -27,6 +30,7 @@ export type textEnum =
     | 'text-footer'
     | 'text-main'
     | 'text-select'
+    | 'text_card_about'
     | 'empty';
 
 export type ThemedTextProps = React.HTMLAttributes<HTMLSpanElement> & {
@@ -72,6 +76,14 @@ export function ThemedText({
         ${type === 'text-main' ? 'text-[16px] lg:text-[18px] text-brown-100 font-poppins' : ''}
         
         ${type === 'text-select' ? 'text-[16px] sm:text-[24px] md:font-semibold font-medium text-brown-100 font-poppins' : ''}
+        ${type === 'title_currency' ? 'lg:text-[52px] md:text-[35px] text-[24px] font-semibold text-brown-100 font-unbounded' : ''}
+        
+        ${type === 'title_about' ? 'lg:text-[52px] md:text-[36px] text-[24px] font-semibold text-brown-100 font-unbounded' : ''}
+        ${type === 'title_card_about' ? 'md:text-[36px] text-[24px] font-bold text-brown-100 font-unbounded' : ''}
+        ${type === 'text_card_about' ? 'text-[16px] font-normal font-poppins' : ''}
+        
+
+
         
         ${type === 'empty' ? '' : ''}
         ${className}`.trim()}

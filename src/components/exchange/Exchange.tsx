@@ -15,7 +15,7 @@ const Exchange = ({
                   }) => {
     return (
         <div
-            className={`flex flex-col p-[24px] ${visibleBorder ? 'border border-[#CFCEDB] rounded-[18px]' : ''}`} {...props}>
+            className={`flex flex-col p-[24px] ${visibleBorder ? 'md:border md:border-[#CFCEDB] md:rounded-[18px]' : ''}`} {...props}>
             <div className='space-y-[20px]'>
                 {fullWindow ? (
                     <div className='flex flex-col gap-y-[10px]'>
@@ -31,8 +31,8 @@ const Exchange = ({
                 ) : (
                     <>
                         <div className='space-y-[20px]'>
-                            <Selector type="crypto" className="w-full"/>
-                            <Input type="crypto" className="w-full"/>
+                            <Selector type="crypto"/>
+                            <Input type="crypto"/>
                         </div>
                         <div>
                             <ThemedText>Minimum exchange amount - </ThemedText>

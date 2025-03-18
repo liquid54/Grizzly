@@ -10,6 +10,7 @@ type SelectorProps = {
     icon?: React.ComponentType<any>;
     label?: string;
     className?: string;
+    containerClass?: string;
 };
 
 const Selector = ({
@@ -17,19 +18,25 @@ const Selector = ({
                       icon: CustomIcon,
                       label,
                       className = '',
-                      ...props
+                      containerClass = '',
                   }: SelectorProps) => {
     const Icon = CustomIcon || (type === 'crypto' ? TetherIcon : Pumb);
     const selectorLabel = label || (type === 'crypto' ? 'Tether (TRC-20) USDT' : 'ПУМБ');
 
     return (
-        <div className={`bg-[#F0F0F3] border-1 border-[#CFCEDB] rounded-[16px] w-full max-w-[500px] ${className}`} {...props}>
-            <div className='flex flex-row items-center justify-between px-[30px] py-[18px] '>
-                <div className='flex space-x-[20px] items-center'>
-                    <Icon />
-                    <ThemedText type='text_bold'>{selectorLabel}</ThemedText>
+        <div className={`flex flex-col space-y-[6px] w-full max-w-[500px] ${containerClass}`}>
+            {label && <ThemedText type='subtitle'>{label}</ThemedText>}
+            <div className={`relative bg-gray-400 border border-white-200 rounded-[16px] w-full ${className}`}>
+                <div
+                    className='flex flex-row items-center justify-between px-[14px] sm:px-[31px] py-[11px] sm:py-[21px]'>
+                    <div className='flex space-x-[20px] items-center'>
+                        <div className='flex h-[21px] w-[21px] md:h-full md:w-full items-center'><Icon/></div>
+                        <div className="lg:max-w-[336px] md:max-w-[248px] max-w-[267px]">
+                            <ThemedText type='text-select' className='truncate text-left'>{selectorLabel}</ThemedText>
+                        </div>
+                    </div>
+                    <Arrow className="fill-black"/>
                 </div>
-                <Arrow className="fill-black"/>
             </div>
         </div>
     );

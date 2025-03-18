@@ -2,8 +2,9 @@
 import React from 'react';
 import Button from "@/components/Button";
 import {ThemedText} from "@/components/ThemedText";
+import Link from "next/link";
 
-const TermsOfUse = ()=> {
+const TermsOfUse = () => {
     // Масив з умовами використання
     const termsOfUse = [
         {
@@ -47,7 +48,8 @@ const TermsOfUse = ()=> {
     return (
         <div className="flex flex-col lg:max-w-[1168px] lg:mx-auto space-y-[50px]">
             <div className="flex justify-center">
-                <ThemedText type='title_terms' className='text-center'>Terms of Use for the Cryptocurrency Exchange Service</ThemedText>
+                <ThemedText type='title_terms' className='text-center'>Terms of Use for the Cryptocurrency Exchange
+                    Service</ThemedText>
             </div>
 
             <div className="space-y-[50px]">
@@ -59,9 +61,13 @@ const TermsOfUse = ()=> {
                 ))}
             </div>
 
-            <div className="flex justify-center">
-                <Button size='xl'>Exchange</Button>
+
+            <div className='w-full flex justify-center'>
+                <Link href='/exchange' className='w-full md:w-auto'>
+                    <Button size='xl'>Exchange</Button>
+                </Link>
             </div>
+
         </div>
     );
 }

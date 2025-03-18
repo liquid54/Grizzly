@@ -6,12 +6,13 @@ import Image from "next/image";
 import {ThemedText} from "@/components/ThemedText";
 import Button from "@/components/Button";
 import Link from "next/link";
+import React from "react";
 
 const About = () => {
     return (
-        <div className='flex flex-col gap-y-[100px] lg:px-[16px] md:px-[32px] px-[16px]'>
+        <div className='flex flex-col gap-y-[100px] lg:px-[16px] md:px-[32px] px-[16px] lg:pt-[100px] md:pt-[118px] pt-[100px]'>
             <div className=''>
-                <div className='flex flex-col lg:gap-y-[50px] items-center lg:max-w-[1168px] lg:mx-auto lg:pt-[100px]'>
+                <div className='flex flex-col gap-y-[50px] items-center lg:max-w-[1168px] lg:mx-auto'>
                     <Image
                         width={1920}
                         height={1080}
@@ -20,7 +21,7 @@ const About = () => {
                         className="rounded-full w-[260px] h-[260px]"
                     />
 
-                    <div className='flex flex-col lg:gap-y-[50px] gap-y-[20px]'>
+                    <div className='flex flex-col lg:gap-y-[50px] gap-y-[20px] '>
                         <ThemedText type='title_about' className='mx-auto'>Grizzly Exchange</ThemedText>
                         <ThemedText type='text' className='md:text-center text-left'>Grizzly exchange is a platform that
                             allows you to
@@ -55,9 +56,13 @@ const About = () => {
                       description="Our company's mission is to provide users with the best cryptocurrency exchange experience while maintaining high security and transaction speed. We aim to make cryptocurrency operations accessible and convenient for people around the world. Our goal is to contribute to the development of the cryptocurrency ecosystem by offering innovative and reliable solutions for every user. We are committed to continuously improving our service to stay one step ahead in the dynamic world of cryptocurrencies."/>
                 <Card icon={<Offer/>} title="What We Offer"
                       description="Our company offers a wide range of services, including cryptocurrency exchange for fiat money and between different cryptocurrencies. We also provide instant and secure transactions with low fees for our users. In addition, we offer 24/7 customer support, ready to assist with any questions. With a user-friendly interface and high security, our users can easily and quickly perform exchanges without any hassle."/>
-                <Link href='/exchange' className="flex justify-center">
-                    <Button size='xl'>Exchange</Button>
-                </Link>
+
+                <div className='w-full flex justify-center'>
+                    <Link href='/exchange' className='w-full md:w-auto'>
+                        <Button size='xl'>Exchange</Button>
+                    </Link>
+                </div>
+
             </div>
         </div>
     );

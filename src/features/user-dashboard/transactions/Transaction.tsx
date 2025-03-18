@@ -4,6 +4,8 @@ import { ThemedText } from '@/components/ThemedText';
 import React from 'react';
 import Image from 'next/image';
 import Button from '@/components/Button';
+import Status from '@/components/Status';
+import { TRANSACTION_STATUS } from '@/constants';
 
 const Transaction = () => {
     return (
@@ -132,12 +134,10 @@ const Transaction = () => {
                     >
                         Status
                     </ThemedText>
-                    <ThemedText
-                        type='empty'
-                        className='text-[15px] sm:text-[24px] leading-none font-semibold text-blue-100 font-poppins'
-                    >
-                        Done
-                    </ThemedText>
+                    <Status
+                        status={TRANSACTION_STATUS.FAILED}
+                        className='text-[15px] sm:text-[24px] md:text-[24px] llg:text-[24px] leading-none'
+                    />
                 </Box>
                 <Button
                     size='xl'

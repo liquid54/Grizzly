@@ -4,8 +4,8 @@ import Button from '@/components/Button';
 import { ThemedText } from '@/components/ThemedText';
 import CustomSelect from '@/components/ui/select';
 import React, { useState } from 'react';
-import { data, header } from '../components/table/mockReferralsData';
-import Table from '../components/table/Table';
+import { data, header } from '@/components/table/mockReferralsData';
+import Table from '@/components/table/Table';
 import WithdrawalModal from './WithdrawalModal';
 import Copy from '@/assets/icons/Copy';
 
@@ -57,7 +57,7 @@ const Referrals = () => {
                     tableHeader={header}
                     indexMobileDismiss={[2]}
                     data={data}
-                    gridTemplateColumns='135px 110px 130px 110px 150px 120px'
+                    gridTemplateColumns='grid-cols-[135px_110px_130px_110px_150px_120px]'
                     firstRenderElementKeys={['referral', 'telegram']}
                 />
             </div>

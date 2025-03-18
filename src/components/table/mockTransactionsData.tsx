@@ -1,5 +1,7 @@
 import { ThemedText } from '@/components/ThemedText';
 import Currency from './Currency';
+import Status from '../Status';
+import { TRANSACTION_STATUS } from '@/constants';
 
 export const header = [
     'Currency',
@@ -26,14 +28,7 @@ export const data = [
         rate: 42.55,
         recipient: '4149 **** **** 4523',
         payment: 'TQpB4***********7k2N9Xm',
-        status: (
-            <ThemedText
-                type='panel-table-header'
-                className='font-semibold text-blue-100'
-            >
-                Done
-            </ThemedText>
-        ),
+        status: <Status status={TRANSACTION_STATUS.DONE} />,
     },
     {
         currency: <Currency />,
@@ -49,14 +44,7 @@ export const data = [
         rate: 42.55,
         recipient: '4149 **** **** 4523',
         payment: 'TQpB4***********7k2N9Xm',
-        status: (
-            <ThemedText
-                type='panel-table-header'
-                className='font-semibold text-blue-100'
-            >
-                Done
-            </ThemedText>
-        ),
+        status: <Status status={TRANSACTION_STATUS.IN_PROGRESS} />,
     },
     {
         currency: <Currency />,
@@ -72,14 +60,7 @@ export const data = [
         rate: 42.55,
         recipient: '4149 **** **** 4523',
         payment: 'TQpB4***********7k2N9Xm',
-        status: (
-            <ThemedText
-                type='panel-table-header'
-                className='font-semibold text-blue-100'
-            >
-                Done
-            </ThemedText>
-        ),
+        status: <Status status={TRANSACTION_STATUS.FAILED} />,
     },
     {
         currency: <Currency />,
@@ -95,14 +76,7 @@ export const data = [
         rate: 42.55,
         recipient: '4149 **** **** 4523',
         payment: 'TQpB4***********7k2N9Xm',
-        status: (
-            <ThemedText
-                type='panel-table-header'
-                className='font-semibold text-blue-100'
-            >
-                Done
-            </ThemedText>
-        ),
+        status: <Status status={TRANSACTION_STATUS.DONE} />,
     },
     {
         currency: <Currency />,
@@ -118,13 +92,6 @@ export const data = [
         rate: 42.55,
         recipient: '4149 **** **** 4523',
         payment: 'TQpB4***********7k2N9Xm',
-        status: (
-            <ThemedText
-                type='panel-table-header'
-                className='font-semibold text-blue-100'
-            >
-                Done
-            </ThemedText>
-        ),
+        status: <Status status={TRANSACTION_STATUS.DONE} />,
     },
 ];

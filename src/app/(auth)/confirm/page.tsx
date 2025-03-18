@@ -2,10 +2,22 @@
 import Input from '@/components/Input';
 import { ThemedText } from '@/components/ThemedText';
 import Button from '@/components/Button';
-import Link from 'next/link';
 import Avatar from '@/components/Avatar';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { Pages } from '@/constants/pages';
 
 const Confirm = () => {
+    const { push } = useRouter();
+    const [state, setState] = useState<string>('');
+
+    const onFakeLogin = () => {
+        if (state === '111111') {
+            push(Pages.ADMIN_TRANSACTIONS);
+        } else {
+            push(Pages.USER_PANEL_MAIN);
+        }
+    };
     return (
         <div className='flex flex-col gap-y-[20px] items-center'>
             <div className='flex flex-col gap-y-[10px] items-center justify-center pb-[10px]'>
@@ -30,20 +42,22 @@ const Confirm = () => {
             </div>
 
             <Input
+                value={state}
+                onChange={value => setState(value)}
                 label={'Email confirmation code'}
                 requiredMark='*'
                 placeholder={'Write your code'}
-                className='w-full'
             />
             <Input
                 label={'Authenticator app'}
                 requiredMark='*'
                 placeholder={'Write your code'}
-                className='w-full'
+                containerClass='mb-[10px]'
             />
-            <Link href='/main' className='pt-[10px] w-full sm:w-fit'>
-                <Button size='xl'>Continue</Button>
-            </Link>
+
+            <Button onClick={onFakeLogin} size='xl'>
+                Continue
+            </Button>
         </div>
     );
 };

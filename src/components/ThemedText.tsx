@@ -6,6 +6,7 @@ export type textEnum =
     | 'title'
     | 'title_poppins'
     | 'title_exchange'
+    | 'text_agreement'
     | 'subtitle'
     | 'subtitle_blue'
     | 'text'
@@ -49,8 +50,9 @@ export function ThemedText({
         ${type === 'subtitle' ? 'text-[18px] sm:text-[20px] font-bold text-brown-100 font-poppins' : ''}
         ${type === 'subtitle_blue' ? 'text-[34px] font-bold text-blue-100 font-unbounded' : ''}
 
-        ${type === 'title_exchange' ? 'text-[22px] leading-[20px] font-bold text-brown-100 font-poppins block uppercase' : ''}
-        ${type === 'text_exchange' ? 'text-[16px] leading-[20px] font-medium text-brown-100 font-poppins block uppercase' : ''}
+        ${type === 'title_exchange' ? 'text-[24px] sm:text-[35px] lg:text-[52px] font-semibold text-brown-100 font-unbounded' : ''}
+        ${type === 'text_exchange' ? 'text-[16px] lg:text-[18px]  font-normal text-brown-100 font-poppins' : ''}
+        ${type === 'text_agreement' ? 'text-[15px] font-normal text-brown-100 font-poppins ' : ''}
         
         ${type === 'text' ? 'text-[16px] sm:text-[18px] text-brown-100 font-poppins' : ''}
         ${type === 'text_blue' ? 'text-[16px] sm:text-[18px] font-bold text-blue-100 font-poppins' : ''}

@@ -10,7 +10,7 @@ import React from "react";
 
 const About = () => {
     return (
-        <div className='flex flex-col gap-y-[100px] lg:px-[16px] md:px-[32px] px-[16px] lg:pt-[100px] md:pt-[118px] pt-[100px]'>
+        <div className='flex flex-col gap-y-[100px] md:px-[32px] px-[16px] lg:pt-[100px] md:pt-[118px] pt-[100px]'>
             <div className=''>
                 <div className='flex flex-col gap-y-[50px] items-center lg:max-w-[1168px] lg:mx-auto'>
                     <Image

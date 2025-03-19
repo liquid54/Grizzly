@@ -19,7 +19,7 @@ const AboutLayout = ({children}: { children?: ReactNode }) => {
                 alt='Circle Left Tablet'
                 width={850}
                 height={850}
-                className='lg:hidden md:block absolute md:w-[800px] md:h-[800px] md:top-[-5%]' //md:top-[-2%]
+                className='hidden lg:hidden md:block absolute md:w-[800px] md:h-[800px] md:top-[-5%]' //md:top-[-2%]
             />
 
 
@@ -36,7 +36,7 @@ const AboutLayout = ({children}: { children?: ReactNode }) => {
                 alt='Circle Left Tablet'
                 width={850}
                 height={850}
-                className='lg:hidden md:block absolute md:w-[800px] md:h-[800px] md:bottom-[-5%] md:right-[-3%]'
+                className='hidden lg:hidden md:block absolute md:w-[800px] md:h-[800px] md:bottom-[-5%] md:right-[-3%]'
             />
 
 

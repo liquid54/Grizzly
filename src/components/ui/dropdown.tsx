@@ -3,8 +3,10 @@ import { ReactNode, forwardRef } from 'react';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import { cn } from '@/utils';
 
+import Dots from 'p/icons/more.svg';
+
 interface DropdownProps {
-    trigger: ReactNode;
+    trigger?: ReactNode;
     children: ReactNode;
     classes?: {
         trigger?: string;
@@ -36,7 +38,7 @@ const CustomDropdownMenu = ({
                 )}
                 onClick={e => e.stopPropagation()}
             >
-                {trigger}
+                {trigger || <Dots />}
             </DropdownMenu.Trigger>
             <DropdownMenu.Portal>
                 <DropdownMenu.Content

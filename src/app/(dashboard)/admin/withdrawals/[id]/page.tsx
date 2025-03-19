@@ -1,4 +1,6 @@
+import RequestConfirmation from '@/features/admin-dashboard/referrals/components/RequestConfirmation';
+
 const WithdrawalPage = () => {
-    return <h1>withdrawal</h1>;
+    return <RequestConfirmation />;
 };
 export default WithdrawalPage;

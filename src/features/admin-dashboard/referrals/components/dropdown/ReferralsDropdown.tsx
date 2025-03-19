@@ -5,7 +5,7 @@ import CustomDropdownMenu, {
 } from '@/components/ui/dropdown';
 import { useState } from 'react';
 
-const OrdersDropdown = () => {
+const ReferralsDropdown = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
     return (
@@ -22,4 +22,4 @@ const OrdersDropdown = () => {
     );
 };
 
-export default OrdersDropdown;
+export default ReferralsDropdown;

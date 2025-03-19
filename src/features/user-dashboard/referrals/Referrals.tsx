@@ -2,12 +2,12 @@
 import Box from '@/components/Box';
 import Button from '@/components/Button';
 import { ThemedText } from '@/components/ThemedText';
-import CustomSelect from '@/components/ui/select';
 import React, { useState } from 'react';
 import { data, header } from '@/components/table/mockReferralsData';
 import Table from '@/components/table/Table';
 import WithdrawalModal from './WithdrawalModal';
 import Copy from '@/assets/icons/Copy';
+import CommonFilters from '@/components/Filters/CommonFilters';
 
 const Referrals = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -17,8 +17,8 @@ const Referrals = () => {
 
     return (
         <>
-            <div className='w-full flex flex-col gap-[30px] xs:rounded-2xl xs:border xs:border-white-200 lg:border-0 xs:p-[30px] lg:p-0'>
-                <div className='flex items-end justify-center sm:justify-between'>
+            <div className='w-full flex flex-col flex-grow gap-[30px] xs:rounded-2xl xs:border xs:border-white-200 lg:border-0 xs:p-[30px] lg:p-0'>
+                <div className='flex items-end justify-center lg:justify-between'>
                     <div className='w-full sm:w-fit flex flex-col gap-4 md:gap-4 lg:gap-5'>
                         <ThemedText
                             type='title_poppins'
@@ -30,23 +30,10 @@ const Referrals = () => {
                             <RightBlock onOpen={onOpen} />
                         </div>
                         {/* filters */}
-                        <Box className='gap-5 sm:gap-4 items-center flex-col sm:flex-row'>
-                            <Box className='gap-4 items-center'>
-                                <div className='w-[134px] min-[390px]:w-[169px] sm:w-[195px]'>
-                                    <CustomSelect title='Wallet type' />
-                                </div>
-                                <div className='w-[134px] min-[390px]:w-[169px] sm:w-[195px]'>
-                                    <CustomSelect title='Total profit' />
-                                </div>
-                            </Box>
-                            <Button
-                                variant='text'
-                                size='text'
-                                className='sm:mt-[21px]'
-                            >
-                                Reset
-                            </Button>
-                        </Box>
+                        <CommonFilters
+                            filters={['Wallet type', 'Total profit']}
+                            cols={2}
+                        />
                     </div>
                     <div className='hidden min-[1300px]:block'>
                         <RightBlock onOpen={onOpen} />

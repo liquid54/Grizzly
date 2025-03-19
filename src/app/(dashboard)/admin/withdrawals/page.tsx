@@ -1,4 +1,6 @@
+import Referrals from '@/features/admin-dashboard/referrals/components/Referrals';
+
 const WithdrawalsPage = () => {
-    return <h1>withdrawals</h1>;
+    return <Referrals />;
 };
 export default WithdrawalsPage;

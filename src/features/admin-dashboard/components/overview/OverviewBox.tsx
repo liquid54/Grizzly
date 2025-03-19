@@ -13,7 +13,10 @@ interface OverviewProps {
 const OverviewBox = ({ title, value, percentage, progress }: OverviewProps) => {
     return (
         <div className='w-full max-w-[415px] gap-[5px] grid grid-cols-1 slg:gap-x-2 slg:grid-cols-[1fr_auto] slg:grid-rows-2 p-3 xl:p-5 rounded-xl lg:rounded-2xl border border-white-200'>
-            <ThemedText type='admin-subtitle' className='text-brown-100'>
+            <ThemedText
+                type='admin-subtitle'
+                className='text-brown-100 break-all'
+            >
                 {title}
             </ThemedText>
 

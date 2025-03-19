@@ -1,4 +1,6 @@
+import Users from '@/features/admin-dashboard/users/components/Users';
+
 const UsersPage = () => {
-    return <h1>users</h1>;
+    return <Users />;
 };
 export default UsersPage;

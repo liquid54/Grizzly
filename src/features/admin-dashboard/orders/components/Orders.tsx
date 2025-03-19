@@ -4,7 +4,7 @@ import Overviews from '../../components/overview/Overviews';
 import Table from '@/components/table/Table';
 import { data, header } from '@/components/table/mockTransactionsData';
 import { Pages } from '@/constants/pages';
-import OrdersDropdown from '../../components/dropdown/OrdersDropdown';
+import OrdersDropdown from './OrdersDropdown';
 import CommonFilters from '@/components/Filters/CommonFilters';
 
 const overviewData = [

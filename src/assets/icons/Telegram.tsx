@@ -8,7 +8,7 @@ const Telegram = () => {
             </g>
             <defs>
                 <clipPath id="clip0_5_134">
-                    <rect width="22" height="22" fill="white" transform="translate(0 0.5)"/>
+                    <rect width="22" height="22" transform="translate(0 0.5)"/>
                 </clipPath>
             </defs>
         </svg>

@@ -6,9 +6,15 @@ export type textEnum =
     | 'title'
     | 'title_poppins'
     | 'title_exchange'
+    | 'title_currency'
+    | 'title_about'
+    | 'title_card_about'
+    | 'title_faq'
+    | 'title_terms'
     | 'text_agreement'
     | 'subtitle'
     | 'subtitle_blue'
+    | 'subtitle_faq'
     | 'text'
     | 'text_blue'
     | 'link_text'
@@ -28,6 +34,7 @@ export type textEnum =
     | 'text-footer'
     | 'text-main'
     | 'text-select'
+    | 'text_card_about'
     | 'empty';
 
 export type ThemedTextProps = React.HTMLAttributes<HTMLSpanElement> & {
@@ -36,10 +43,10 @@ export type ThemedTextProps = React.HTMLAttributes<HTMLSpanElement> & {
 };
 
 export function ThemedText({
-    type = 'text',
-    className = '',
-    ...rest
-}: ThemedTextProps) {
+                               type = 'text',
+                               className = '',
+                               ...rest
+                           }: ThemedTextProps) {
     return (
         <span
             className={`
@@ -74,7 +81,16 @@ export function ThemedText({
         ${type === 'text-main' ? 'text-[16px] lg:text-[18px] text-brown-100 font-poppins' : ''}
         
         ${type === 'text-select' ? 'text-[16px] sm:text-[24px] md:font-semibold font-medium text-brown-100 font-poppins' : ''}
+        ${type === 'title_currency' ? 'lg:text-[52px] md:text-[35px] text-[24px] font-semibold text-brown-100 font-unbounded' : ''}
         
+        ${type === 'title_about' ? 'lg:text-[52px] md:text-[36px] text-[24px] font-semibold text-brown-100 font-unbounded' : ''}
+        ${type === 'title_card_about' ? 'md:text-[36px] text-[24px] font-bold text-brown-100 font-unbounded' : ''}
+        ${type === 'text_card_about' ? 'text-[16px] font-normal font-poppins' : ''}
+        
+        ${type === 'title_faq' ? 'md:text-[36px] text-[24px] font-semibold text-brown-100 font-unbounded' : ''}
+        ${type === 'title_terms' ? 'md:text-[36px] text-[24px] font-semibold text-brown-100 lg:font-poppins font-unbounded' : ''}
+        ${type === 'subtitle_faq' ? 'md:text-[24px] text-[15px] font-semibold text-brown-100 font-poppins' : ''}
+
         ${type === 'empty' ? '' : ''}
         ${className}`.trim()}
             {...rest}

@@ -3,7 +3,7 @@ import FAQ from "@/features/faq/FAQ";
 
 const Faq = () => {
     return (
-        <div className='space-y-[150px] px-[375px] pt-[100px]'>
+        <div className='lg:space-y-[150px] md:space-y-[76px] space-y-[100px] md:pt-[100px] pt-[50px] pb-[100px] md:px-[32px] px-[16px]'>
             <FAQ/>
             <TermsOfUse/>
         </div>

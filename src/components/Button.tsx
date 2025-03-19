@@ -4,7 +4,7 @@ import { ThemedText, textEnum } from './ThemedText'; // Шлях до вашог
 interface ButtonProps {
     children: ReactNode;
     className?: string;
-    variant?: 'primary' | 'secondary' | 'red' | 'social' | 'text';
+    variant?: 'primary' | 'secondary' | 'red' | 'social' | 'text' | 'blue';
     size?:
         | 'large'
         | 'mid_large'
@@ -36,6 +36,7 @@ const Button = ({
         secondary: 'bg-white border-[2px] border-blue-200 text-blue-200',
         red: 'border-2 border-red-100 bg-white text-red-100',
         social: 'bg-[#31A8E0] text-white',
+        blue: 'bg-white border-[2px] border-blue-100 text-blue-100',
         text: 'bg-none',
     };
 
@@ -63,6 +64,8 @@ const Button = ({
             case 'red':
                 return 'text_button_red';
             case 'text':
+                return 'text_button_blue';
+            case 'blue':
                 return 'text_button_blue';
             default:
                 return 'text';

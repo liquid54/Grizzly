@@ -31,7 +31,7 @@ const Referrals = () => {
                         </div>
                         {/* filters */}
                         <Box className='gap-5 sm:gap-4 items-center flex-col sm:flex-row'>
-                            <Box className='gap-4 items-center'>
+                            <Box className='gap-4 items-end'>
                                 <div className='w-[134px] min-[390px]:w-[169px] sm:w-[195px]'>
                                     <CustomSelect title='Wallet type' />
                                 </div>

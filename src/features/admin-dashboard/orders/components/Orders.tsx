@@ -9,6 +9,13 @@ import { data, header } from '@/components/table/mockTransactionsData';
 import { Pages } from '@/constants/pages';
 import OrdersDropdown from '../../components/dropdown/OrdersDropdown';
 
+const overviewData = [
+    { title: 'Total orders', value: 1482, percentage: 12, progress: 22 },
+    { title: 'Pending', value: 322, percentage: 10, progress: 77 },
+    { title: 'Done today', value: 1482, percentage: 12, progress: 77 },
+    { title: 'Failed', value: 5, percentage: -12, progress: 22 },
+];
+
 const Orders = () => {
     return (
         <div className='w-full flex flex-col gap-5 xs:rounded-2xl xs:border xs:border-white-200 lg:border-0 xs:p-[30px] lg:p-0'>
@@ -22,7 +29,7 @@ const Orders = () => {
 
                 {/* filters */}
                 <Box className='gap-5 min-[1020px]:gap-4 items-center flex-col min-[1020px]:flex-row flex-wrap'>
-                    <Box className='gap-4 items-center'>
+                    <Box className='gap-4 items-end'>
                         <div className='w-[134px] min-[390px]:w-[169px] sm:w-[195px]'>
                             <CustomSelect title='Status' />
                         </div>
@@ -30,7 +37,7 @@ const Orders = () => {
                             <CustomSelect title='Date' />
                         </div>
                     </Box>
-                    <Box className='gap-4 items-center'>
+                    <Box className='gap-4 items-end'>
                         <div className='w-[134px] min-[390px]:w-[169px] sm:w-[195px]'>
                             <CustomSelect title='Amount' />
                         </div>
@@ -48,7 +55,7 @@ const Orders = () => {
                 </Box>
             </div>
 
-            <Overviews />
+            <Overviews data={overviewData} />
 
             {/* table */}
             <div className='mt-[10px]'>

@@ -13,7 +13,14 @@ interface SelectProps {
 const CustomSelect = ({ title, classes }: SelectProps) => {
     return (
         <div className='flex flex-col gap-2 w-full max-w-full'>
-            {title && <ThemedText type='panel-medium-text'>{title}</ThemedText>}
+            {title && (
+                <ThemedText
+                    type='panel-medium-text'
+                    className='text-[15px] sm:text-base'
+                >
+                    {title}
+                </ThemedText>
+            )}
             <Select.Root>
                 <Select.Trigger
                     className={`cursor-pointer inline-flex items-center justify-between  w-full max-w-full pl-[14px] pr-[10px] py-2 border border-white-200 rounded-xl bg-white text-brown-100 font-poppins focus:ring-2 focus:ring-blue-500 ${classes?.trigger}`}

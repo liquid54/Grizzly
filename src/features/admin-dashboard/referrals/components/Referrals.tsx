@@ -3,37 +3,46 @@ import Button from '@/components/Button';
 import { ThemedText } from '@/components/ThemedText';
 import CustomSelect from '@/components/ui/select';
 import React from 'react';
-import { data, header } from '@/components/table/mockTransactionsData';
+import Overviews from '../../components/overview/Overviews';
 import Table from '@/components/table/Table';
+import { admin_data, admin_header } from '@/components/table/mockReferralsData';
 import { Pages } from '@/constants/pages';
+import ReferralsDropdown from './dropdown/ReferralsDropdown';
 
-const Transactions = () => {
+const referralsData = [
+    { title: 'Total requests', value: 1482, percentage: 12, progress: 22 },
+    { title: 'Pending', value: 322, percentage: 10, progress: 77 },
+    { title: 'Done today', value: 1482, percentage: 12, progress: 77 },
+    { title: 'Failed', value: 5, percentage: -12, progress: 22 },
+];
+
+const Referrals = () => {
     return (
-        <div className='w-full flex flex-col gap-[30px] xs:rounded-2xl xs:border xs:border-white-200 lg:border-0 xs:p-[30px] lg:p-0'>
+        <div className='w-full flex flex-col gap-5 xs:rounded-2xl xs:border xs:border-white-200 lg:border-0 xs:p-[30px] lg:p-0'>
             <div className='w-full flex flex-col gap-4 md:gap-[10px] lg:gap-5'>
                 <ThemedText
                     type='title_poppins'
                     className='text-[24px] lg:text-[34px] leading-none'
                 >
-                    Transactions
+                    Withdrawal requests
                 </ThemedText>
 
                 {/* filters */}
                 <Box className='gap-5 min-[1020px]:gap-4 items-center flex-col min-[1020px]:flex-row flex-wrap'>
                     <Box className='gap-4 items-end'>
                         <div className='w-[134px] min-[390px]:w-[169px] sm:w-[195px]'>
-                            <CustomSelect title='Transfer currency' />
+                            <CustomSelect title='Status' />
                         </div>
                         <div className='w-[134px] min-[390px]:w-[169px] sm:w-[195px]'>
-                            <CustomSelect title='Recipient currency' />
+                            <CustomSelect title='Application date' />
                         </div>
                     </Box>
                     <Box className='gap-4 items-end'>
                         <div className='w-[134px] min-[390px]:w-[169px] sm:w-[195px]'>
-                            <CustomSelect title='Wallet type' />
+                            <CustomSelect title='Date of disbursement' />
                         </div>
                         <div className='w-[134px] min-[390px]:w-[169px] sm:w-[195px]'>
-                            <CustomSelect title='Status' />
+                            <CustomSelect title='Sort by' />
                         </div>
                     </Box>
                     <Button
@@ -46,16 +55,21 @@ const Transactions = () => {
                 </Box>
             </div>
 
-            <Table
-                tableHeader={header}
-                indexMobileDismiss={[6]}
-                data={data}
-                gridTemplateColumns='grid-cols-[135px_70px_50px_80px_120px_180px_70px] llg:grid-cols-[175px_90px_65px_120px_175px_230px_105px]'
-                firstRenderElementKeys={['currency', 'status']}
-                href={Pages.USER_PANEL_TRANSACTION}
-            />
+            <Overviews data={referralsData} />
+
+            {/* table */}
+            <div className='mt-[10px]'>
+                <Table
+                    tableHeader={admin_header}
+                    data={admin_data}
+                    gridTemplateColumns='grid-cols-[130px_80px_50px_70px_80px_20px] slg:grid-cols-[300px_110px_70px_110px_110px_20px]'
+                    firstRenderElementKeys={['referral', 'telegram']}
+                    href={Pages.ADMIN_WITHDRAWAL}
+                    settingsMenu={<ReferralsDropdown />}
+                />
+            </div>
         </div>
     );
 };
 
-export default Transactions;
+export default Referrals;

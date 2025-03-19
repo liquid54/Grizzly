@@ -79,7 +79,7 @@ export function ThemedText({
         ${type === 'panel-title' ? 'font-semibold text-[24px] lg:text-[26px] leading-none text-dark-100 font-poppins' : ''}
         ${type === 'panel-heading' ? 'font-semibold text-[18px] md:text-[24px] lg:text-[34px] text-brown-100 font-poppins' : ''}
         ${type === 'panel-title-blue' ? 'font-semibold text-[20px] lg:text-[22px] leading-none text-blue-100 font-poppins' : ''}
-        ${type === 'panel-table-header' ? 'font-normal text-[15px] md:text-[12px] leading-none llg:text-[18px] font-poppins' : ''}
+        ${type === 'panel-table-header' ? 'font-normal text-[15px] md:text-[13px] leading-none llg:text-[18px] font-poppins' : ''}
         ${type === 'panel-medium-text' ? 'text-[16px] leading-none font-medium text-brown-100 font-poppins' : ''}
         ${type === 'panel-medium-text-blue' ? 'text-[16px] font-medium text-blue-100 font-poppins' : ''}
         ${type === 'text-footer' ? 'text-[15px] text-brown-100 font-poppins' : ''}

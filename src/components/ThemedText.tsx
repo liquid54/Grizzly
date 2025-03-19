@@ -11,6 +11,7 @@ export type textEnum =
     | 'title_card_about'
     | 'title_faq'
     | 'title_terms'
+    | 'text_agreement'
     | 'subtitle'
     | 'subtitle_blue'
     | 'subtitle_faq'
@@ -53,11 +54,12 @@ export function ThemedText({
         ${type === 'heading_blue' ? 'lg:text-[70px] md:text-[50px] text-[35px] font-bold text-blue-100 font-unbounded leading-[100%] tracking-[0%]' : ''}
         ${type === 'title' ? 'lg:text-[52px] text-[35px] font-semibold text-brown-100 font-unbounded' : ''}
         ${type === 'title_poppins' ? 'text-[24px] font-semibold text-brown-100 font-poppins' : ''}
-        ${type === 'subtitle' ? 'text-[20px] font-bold text-brown-100 font-poppins' : ''}
+        ${type === 'subtitle' ? 'text-[18px] sm:text-[20px] font-bold text-brown-100 font-poppins' : ''}
         ${type === 'subtitle_blue' ? 'text-[34px] font-bold text-blue-100 font-unbounded' : ''}
 
-        ${type === 'title_exchange' ? 'text-[22px] leading-[20px] font-bold text-brown-100 font-poppins block uppercase' : ''}
-        ${type === 'text_exchange' ? 'text-[16px] leading-[20px] font-medium text-brown-100 font-poppins block uppercase' : ''}
+        ${type === 'title_exchange' ? 'text-[24px] sm:text-[35px] lg:text-[52px] font-semibold text-brown-100 font-unbounded' : ''}
+        ${type === 'text_exchange' ? 'text-[16px] lg:text-[18px]  font-normal text-brown-100 font-poppins' : ''}
+        ${type === 'text_agreement' ? 'text-[15px] font-normal text-brown-100 font-poppins ' : ''}
         
         ${type === 'text' ? 'text-[16px] sm:text-[18px] text-brown-100 font-poppins' : ''}
         ${type === 'text_blue' ? 'text-[16px] sm:text-[18px] font-bold text-blue-100 font-poppins' : ''}

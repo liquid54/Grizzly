@@ -1,16 +1,23 @@
 'use client';
+import { useState } from 'react';
 import LanguageSwitcher from '@/components/User/LanguageSelector';
 import Link from 'next/link';
 import Avatar from '../Avatar';
 import ButtonTg from '../ButtonTG';
 import MobileHeader from './MobileHeader';
 import SettingsMenu from '@/features/user-dashboard/components/settings-menu/SettingsMenu';
-import { useState } from 'react';
+import AdminMenu from '@/features/admin-dashboard/components/settings-menu/AdminMenu';
 
-const Header = ({ isMain = false }: { isMain?: boolean }) => {
+const Header = ({
+    isMain = false,
+    isAdmin = false,
+}: {
+    isMain?: boolean;
+    isAdmin?: boolean;
+}) => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
-    const onOpenSettings = () => {
+    const onOpenMenu = () => {
         setIsOpen(prev => !prev);
     };
 
@@ -19,21 +26,20 @@ const Header = ({ isMain = false }: { isMain?: boolean }) => {
             <header className='shadow-header sm:shadow-none sm:border-b sm:border-white-200 h-fit'>
                 <nav
                     className={
-                        isMain
+                        isMain || isAdmin
                             ? 'max-w-[1920px] m-auto px-4 sm:px-[32px] lg:px-[30px] py-[6px] lg:pt-[10px] lg:pb-[11px] sm:pt-[8px] sm:pb-[7px] flex flex-row justify-end items-center'
                             : ''
                     }
                 >
                     <div className='w-full flex justify-center sm:justify-end items-center'>
-                        <MobileHeader
-                            isOpen={isOpen}
-                            setIsOpen={onOpenSettings}
-                        />
+                        <MobileHeader isOpen={isOpen} setIsOpen={onOpenMenu} />
                         <div className='hidden flex-row gap-5 sm:flex items-center'>
                             <LanguageSwitcher />
-                            <Link href={''}>
-                                <ButtonTg isMain={true} />
-                            </Link>
+                            {!isAdmin && (
+                                <Link href={''}>
+                                    <ButtonTg isMain={true} />
+                                </Link>
+                            )}
                             <Link href='/main'>
                                 <Avatar
                                     size={50}
@@ -45,9 +51,8 @@ const Header = ({ isMain = false }: { isMain?: boolean }) => {
                     </div>
                 </nav>
             </header>
-            {isMain && (
-                <SettingsMenu isOpen={isOpen} setIsOpen={onOpenSettings} />
-            )}
+            {isMain && <SettingsMenu isOpen={isOpen} setIsOpen={onOpenMenu} />}
+            {isAdmin && <AdminMenu isOpen={isOpen} setIsOpen={onOpenMenu} />}
         </>
     );
 };

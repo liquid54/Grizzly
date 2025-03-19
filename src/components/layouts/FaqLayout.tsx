@@ -22,7 +22,6 @@ const FaqLayout = ({children}: { children?: ReactNode }) => {
             />
 
 
-
             {/*/!* coins *!/*/}
 
             <Image

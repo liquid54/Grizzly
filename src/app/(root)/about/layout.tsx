@@ -7,7 +7,7 @@ export default function RootLayout({
 }) {
     return (
         <AboutLayout>
-            <div>{children}</div>
+            <div className='z-[1]'>{children}</div>
         </AboutLayout>
     );
 }

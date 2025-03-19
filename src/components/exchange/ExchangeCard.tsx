@@ -25,8 +25,8 @@ const ExchangeCard = ({ exchange }: ExchangeCardProps) => {
                         <Pumb/>
                     </div>
                 </div>
-                <div className='flex flex-col gap-[5px] justify-center whitespace-nowrap min-w-[160px]'>
-                    <ThemedText type='title_exchange'>{rate}</ThemedText>
+                <div className='flex flex-col justify-center whitespace-nowrap min-w-[160px]'>
+                    <ThemedText type='title_exchange_slider'>{rate}</ThemedText>
                     <ThemedText type='text_exchange'>{from} 🠞 {to}</ThemedText>
                 </div>
             </div>

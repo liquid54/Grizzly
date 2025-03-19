@@ -1,13 +1,11 @@
-import Box from '@/components/Box';
-import Button from '@/components/Button';
 import { ThemedText } from '@/components/ThemedText';
-import CustomSelect from '@/components/ui/select';
 import React from 'react';
 import Overviews from '../../components/overview/Overviews';
 import Table from '@/components/table/Table';
 import { data, header } from '@/components/table/mockTransactionsData';
 import { Pages } from '@/constants/pages';
 import OrdersDropdown from '../../components/dropdown/OrdersDropdown';
+import CommonFilters from '@/components/Filters/CommonFilters';
 
 const overviewData = [
     { title: 'Total orders', value: 1482, percentage: 12, progress: 22 },
@@ -18,7 +16,7 @@ const overviewData = [
 
 const Orders = () => {
     return (
-        <div className='w-full flex flex-col gap-5 xs:rounded-2xl xs:border xs:border-white-200 lg:border-0 xs:p-[30px] lg:p-0'>
+        <div className='w-full flex flex-grow flex-col gap-5 xs:rounded-2xl xs:border xs:border-white-200 lg:border-0 xs:p-[30px] lg:p-0'>
             <div className='w-full flex flex-col gap-4 md:gap-[10px] lg:gap-5'>
                 <ThemedText
                     type='title_poppins'
@@ -28,31 +26,9 @@ const Orders = () => {
                 </ThemedText>
 
                 {/* filters */}
-                <Box className='gap-5 min-[1020px]:gap-4 items-center flex-col min-[1020px]:flex-row flex-wrap'>
-                    <Box className='gap-4 items-end'>
-                        <div className='w-[134px] min-[390px]:w-[169px] sm:w-[195px]'>
-                            <CustomSelect title='Status' />
-                        </div>
-                        <div className='w-[134px] min-[390px]:w-[169px] sm:w-[195px]'>
-                            <CustomSelect title='Date' />
-                        </div>
-                    </Box>
-                    <Box className='gap-4 items-end'>
-                        <div className='w-[134px] min-[390px]:w-[169px] sm:w-[195px]'>
-                            <CustomSelect title='Amount' />
-                        </div>
-                        <div className='w-[134px] min-[390px]:w-[169px] sm:w-[195px]'>
-                            <CustomSelect title='Currency type' />
-                        </div>
-                    </Box>
-                    <Button
-                        variant='text'
-                        size='text'
-                        className='min-[1020px]:mt-[21px]'
-                    >
-                        Reset
-                    </Button>
-                </Box>
+                <CommonFilters
+                    filters={['Status', 'Date', 'Amount', 'Currency type']}
+                />
             </div>
 
             <Overviews data={overviewData} />

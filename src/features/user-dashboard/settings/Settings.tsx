@@ -8,7 +8,7 @@ import React from 'react';
 
 const Settings = () => {
     return (
-        <div className='w-full h-full flex flex-col gap-[30px] xs:rounded-2xl xs:border xs:border-white-200 lg:border-0 xs:p-[30px] xs:pt-[39px] lg:pt-0 lg:p-0'>
+        <div className='w-full h-full flex flex-grow flex-col gap-[30px] xs:rounded-2xl xs:border xs:border-white-200 lg:border-0 xs:p-[30px] xs:pt-[39px] lg:pt-0 lg:p-0'>
             <div className='w-full flex flex-col gap-5 md:gap-[30px] lg:gap-5'>
                 <ThemedText
                     type='title_poppins'

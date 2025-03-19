@@ -9,7 +9,7 @@ import { TRANSACTION_STATUS } from '@/constants';
 
 const Transaction = () => {
     return (
-        <div className='flex flex-col w-full pt-5 xs:p-[30px] lg:p-0 lg:pt-[30px] lg:max-w-[586px] mx-auto gap-[30px] md:gap-[50px] xs:rounded-2xl xs:border xs:border-white-200 lg:border-0 '>
+        <div className='flex flex-col flex-grow w-full pt-5 xs:p-[30px] lg:p-0 lg:pt-[30px] lg:max-w-[586px] mx-auto gap-[30px] md:gap-[50px] xs:rounded-2xl xs:border xs:border-white-200 lg:border-0 '>
             <div className='flex items-center gap-[30px] shrink-0'>
                 <div className='flex items-center shrink-0'>
                     <Avatar

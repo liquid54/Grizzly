@@ -45,7 +45,7 @@ const FAQ = () => {
             </div>
             <div className="space-y-4">
                 {faqItems.map((item, index) => (
-                    <div key={index} className="flex flex-row justify-between p-[22px] items-center border border-white-200 rounded-[24px]">
+                    <div key={index} className="flex flex-row justify-between p-[22px] items-center border border-white-200 rounded-[24px] bg-white">
                         <ThemedText type='subtitle_faq'>{item.question}</ThemedText>
                         <Arrow className="fill-black"/>
 

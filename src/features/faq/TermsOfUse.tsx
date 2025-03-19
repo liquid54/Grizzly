@@ -62,8 +62,8 @@ const TermsOfUse = () => {
             </div>
 
             <div className='w-full flex justify-center'>
-                <Link href='/exchange' className='w-full md:w-auto'>
-                    <Button size='xl'>Exchange</Button>
+                <Link href='/exchange' className='w-full sm:w-auto'>
+                    <Button size='xl' className='w-full'>Exchange</Button>
                 </Link>
             </div>
 

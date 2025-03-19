@@ -58,8 +58,8 @@ const About = () => {
                       description="Our company offers a wide range of services, including cryptocurrency exchange for fiat money and between different cryptocurrencies. We also provide instant and secure transactions with low fees for our users. In addition, we offer 24/7 customer support, ready to assist with any questions. With a user-friendly interface and high security, our users can easily and quickly perform exchanges without any hassle."/>
 
                 <div className='w-full flex justify-center'>
-                    <Link href='/exchange' className='w-full md:w-auto'>
-                        <Button size='xl'>Exchange</Button>
+                    <Link href='/exchange' className='w-full sm:w-auto'>
+                        <Button size='xl' className='w-full'>Exchange</Button>
                     </Link>
                 </div>
 

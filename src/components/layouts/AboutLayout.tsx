@@ -40,16 +40,6 @@ const AboutLayout = ({children}: { children?: ReactNode }) => {
             />
 
 
-            {/*<Image*/}
-            {/*    src='/frame/bg-circles.svg'*/}
-            {/*    alt='Circle Left'*/}
-            {/*    width={850}*/}
-            {/*    height={850}*/}
-            {/*    className='hidden sm:block absolute -bottom-[2%] -left-[2%] w-[300px] md:w-[470px] lg:w-[850px] h-[300px] md:h-[470px] lg:h-[850px]'*/}
-            {/*/>*/}
-
-            {/*/!* coins *!/*/}
-
             <Image
                 src='/Bitcoin.png'
                 alt='bitcoin'

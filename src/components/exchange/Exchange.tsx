@@ -15,7 +15,7 @@ const Exchange = ({
 }) => {
     return (
         <div
-            className={`flex flex-col ${visibleBorder ? 'md:border md:border-[#CFCEDB] md:rounded-[18px]' : ''}`}
+            className={`flex flex-col ${visibleBorder ? 'md:border md:border-[#CFCEDB] md:rounded-[18px] md:p-[24px]' : ''}`}
             {...props}
         >
             <div className=' space-y-[20px] '>

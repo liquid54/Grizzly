@@ -70,10 +70,16 @@ const Exchange = ({
                 </div>
 
                 <Agreement />
-                <div className={fullWidthButton ? '' : 'flex justify-center'}>
+                <div
+                    className={
+                        fullWidthButton
+                            ? 'w-full'
+                            : 'sm:flex sm:justify-center w-full'
+                    }
+                >
                     <Link href={buttonLink}>
                         <Button
-                            size='mid_large'
+                            size='medium'
                             className={fullWidthButton ? 'w-full' : ''}
                         >
                             Exchange

@@ -32,8 +32,8 @@ const ExchangePayment = ({ buttonLink = '' }: { buttonLink?: string }) => {
                     className='items-center'
                 />
             </div>
-            <Link href={buttonLink}>
-                <Button size='mid_large'>Exchange</Button>
+            <Link href={buttonLink} className='w-full sm:w-auto max-w-[500px]'>
+                <Button size='medium'>Exchange</Button>
             </Link>
         </div>
     );

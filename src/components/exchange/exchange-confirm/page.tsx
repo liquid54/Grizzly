@@ -41,9 +41,12 @@ const ExchangeConfirm = ({ buttonLink = '' }: { buttonLink?: string }) => {
                     choosing our service!
                 </ThemedText>
             </div>
-            <div className='flex flex-col gap-y-[10px] items-center'>
-                <Link href={buttonLink}>
-                    <Button size='mid_large'>Done</Button>
+            <div className='w-full flex flex-col gap-y-[10px] items-center'>
+                <Link
+                    href={buttonLink}
+                    className='w-full sm:w-auto max-w-[400px]'
+                >
+                    <Button size='medium'>Done</Button>
                 </Link>
                 <ThemedText type='link_text'>
                     Didnt receive the funds?

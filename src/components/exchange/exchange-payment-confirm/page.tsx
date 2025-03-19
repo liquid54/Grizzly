@@ -41,32 +41,39 @@ const PaymentConfirm = ({ buttonLink = '' }: { buttonLink?: string }) => {
                     label={'CVV Code'}
                     placeholder={'Write your CVV code here'}
                 />
-                <div className='flex justify-center'>
-                    <Link href={buttonLink}>
+                <div className='w-full flex justify-center'>
+                    <Link
+                        href={buttonLink}
+                        className='w-full sm:w-auto max-w-[500px]'
+                    >
                         <Button size='medium'>Pay</Button>
                     </Link>
                 </div>
-                <div className='flex justify-center gap-x-[8px]'>
+                <div className='w-full max-sm:max-w-[500px] mx-auto flex justify-center gap-x-[8px] pb-[10px]'>
                     <Button
                         size='medium'
                         variant='secondary'
-                        className='border-gray-100 font-semibold'
+                        className=' border-gray-400 font-semibold'
                     >
                         <div className='flex flex-row justify-center items-center gap-x-[10px] '>
-                            <div className='pb-[13.5px]'>
+                            <div>
                                 <Apple />
                             </div>
-                            <ThemedText>Apple Pay</ThemedText>
+                            <ThemedText title='text_exchange'>
+                                Apple Pay
+                            </ThemedText>
                         </div>
                     </Button>
                     <Button
                         size='medium'
                         variant='secondary'
-                        className='border-gray-100 font-semibold '
+                        className='border-gray-400 font-semibold'
                     >
                         <div className='flex flex-row justify-center items-center  gap-x-[10px]'>
                             <Google />
-                            <ThemedText>Google Pay</ThemedText>
+                            <ThemedText title='text_exchange'>
+                                Google Pay
+                            </ThemedText>
                         </div>
                     </Button>
                 </div>

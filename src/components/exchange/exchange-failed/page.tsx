@@ -40,9 +40,9 @@ const ExchangeFailed = () => {
                     team for prompt assistance.
                 </ThemedText>
             </div>
-            <div className='flex flex-col gap-y-[10px] items-center'>
-                <Link href=''>
-                    <Button size='mid_large'>Retry</Button>
+            <div className='w-full flex flex-col gap-y-[10px] items-center'>
+                <Link href='' className='w-full sm:w-auto max-w-[400px]'>
+                    <Button size='medium'>Retry</Button>
                 </Link>
             </div>
         </div>

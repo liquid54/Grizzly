@@ -1,11 +1,52 @@
 import Image from 'next/image';
-import React, { type ReactNode } from 'react';
+import React, {type ReactNode} from 'react';
 
-const AboutLayout = ({ children }: { children?: ReactNode }) => {
+const AboutLayout = ({children}: { children?: ReactNode }) => {
     return (
-        <div className='relative w-full flex flex-col max-w-screen min-h-screen overflow-hidden z-[0]'>
+        <div className='relative w-full flex flex-col max-w-screen min-h-screen overflow-hidden z-2'>
             {/*<Image*/}
 
+            <Image
+                src='frame/about/bg-circles-top-lg.svg'
+                alt='Circle Left'
+                width={950}
+                height={950}
+                className='hidden lg:block absolute lg:w-[950px] lg:h-[950px] lg:top-[-4.5%] lg:left-[-4%]'
+            />
+
+            <Image
+                src='frame/about/bg-circles-top-md.svg'
+                alt='Circle Left Tablet'
+                width={850}
+                height={850}
+                className='lg:hidden md:block absolute md:w-[800px] md:h-[800px] md:top-[-5%]' //md:top-[-2%]
+            />
+
+
+            <Image
+                src='frame/about/bg-circles-bot-lg.svg'
+                alt='Circle Left'
+                width={850}
+                height={850}
+                className='hidden lg:block absolute lg:w-[950px] lg:h-[950px] lg:bottom-[-4.5%] lg:right-[-4%]'
+            />
+
+            <Image
+                src='frame/about/bg-circles-bot-md.svg'
+                alt='Circle Left Tablet'
+                width={850}
+                height={850}
+                className='lg:hidden md:block absolute md:w-[800px] md:h-[800px] md:bottom-[-5%] md:right-[-3%]'
+            />
+
+
+            {/*<Image*/}
+            {/*    src='/frame/bg-circles.svg'*/}
+            {/*    alt='Circle Left'*/}
+            {/*    width={850}*/}
+            {/*    height={850}*/}
+            {/*    className='hidden sm:block absolute -bottom-[2%] -left-[2%] w-[300px] md:w-[470px] lg:w-[850px] h-[300px] md:h-[470px] lg:h-[850px]'*/}
+            {/*/>*/}
 
             {/*/!* coins *!/*/}
 
@@ -14,14 +55,14 @@ const AboutLayout = ({ children }: { children?: ReactNode }) => {
                 alt='bitcoin'
                 width={145}
                 height={145}
-                className='hidden sm:block absolute lg:w-[74px] lg:h-[74px] md:w-[145px] md:h-[145px] w-[84px] h-[84px] lg:top-[295px] md:top-[187px] top-[64px] lg:left-[69%] md:left-[87%] left-[84%] md:blur-[1px] blur-[2.32px]'/>
+                className='absolute lg:w-[74px] lg:h-[74px] md:w-[145px] md:h-[145px] w-[84px] h-[84px] lg:top-[295px] md:top-[187px] top-[64px] lg:left-[69%] md:left-[87%] left-[84%] md:blur-[1px] blur-[2.32px]'/>
 
             <Image
                 src='/Polkadot.png'
                 alt='polkadot'
                 width={126}
                 height={126}
-                className='hidden sm:block absolute md:w-[126px] md:h-[126px] w-[56px] h-[56px] left-[-2%] lg:top-[179px] md:top-[104px] top-[27px] blur-[2px]'/>
+                className='absolute md:w-[126px] md:h-[126px] w-[56px] h-[56px] left-[-2%] lg:top-[179px] md:top-[104px] top-[27px] blur-[2px]'/>
 
             <Image
                 src='/Polygon.png'
@@ -44,7 +85,7 @@ const AboutLayout = ({ children }: { children?: ReactNode }) => {
                 alt='litecoin'
                 width={111}
                 height={111}
-                className='absolute lg:block hidden lg:left-[91%] lg:pt-[1162px] md:left-[90%] md:pt-[727px] left-[84%] pt-[1108px]'
+                className='absolute lg:left-[91%] lg:pt-[1162px] md:left-[90%] md:pt-[727px] left-[84%] pt-[1108px]'
             />
 
             <Image

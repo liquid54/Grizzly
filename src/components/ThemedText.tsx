@@ -12,6 +12,7 @@ export type textEnum =
     | 'title_card_about'
     | 'title_faq'
     | 'title_terms'
+    | 'title_exchange_slider'
     | 'text_agreement'
     | 'subtitle'
     | 'subtitle_blue'
@@ -99,6 +100,9 @@ export function ThemedText({
         ${type === 'title_faq' ? 'md:text-[36px] text-[24px] font-semibold text-brown-100 font-unbounded' : ''}
         ${type === 'title_terms' ? 'md:text-[36px] text-[24px] font-semibold text-brown-100 lg:font-poppins font-unbounded' : ''}
         ${type === 'subtitle_faq' ? 'md:text-[24px] text-[15px] font-semibold text-brown-100 font-poppins' : ''}
+        
+        ${type === 'title_exchange_slider' ? 'text-[22px] font-semibold text-brown-100 font-poppins' : ''}
+
 
         ${type === 'empty' ? '' : ''}
         ${className}`)}

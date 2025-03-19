@@ -1,11 +1,11 @@
-import ExchangeConfirm from "@/components/exchange/exchange-confirm/page";
+import ExchangeConfirm from '@/components/exchange/exchange-confirm/page';
 
 const ExchangeConfirmPage = () => {
     return (
-        <div className='pt-[100px] pb-[151px] px-[370px]'>
-            <ExchangeConfirm buttonLink="/exchange-failed"/>
+        <div className='px-[16px] pt-[100px] md:pt-[118px] sm:pt-[100px]'>
+            <ExchangeConfirm buttonLink='/exchange-failed' />
         </div>
     );
-}
+};
 
 export default ExchangeConfirmPage;

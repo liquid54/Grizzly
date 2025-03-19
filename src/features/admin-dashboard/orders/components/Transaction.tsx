@@ -6,10 +6,11 @@ import Image from 'next/image';
 import Button from '@/components/Button';
 import Status from '@/components/Status';
 import { TRANSACTION_STATUS } from '@/constants';
+import AdminSelect from '@/components/ui/status-select';
 
 const Transaction = () => {
     return (
-        <div className='flex flex-col w-full pt-5 xs:p-[30px] lg:p-0 lg:pt-[30px] lg:max-w-[586px] mx-auto gap-[30px] md:gap-[50px] xs:rounded-2xl xs:border xs:border-white-200 lg:border-0 '>
+        <div className='flex flex-col w-full pt-5 xs:p-[30px]  lg:p-0 lg:pt-[30px] lg:max-w-[586px] mx-auto gap-[30px] md:gap-[50px] xs:rounded-2xl xs:border xs:border-white-200 lg:border-0'>
             <div className='flex items-center gap-[30px] shrink-0'>
                 <div className='flex items-center shrink-0'>
                     <Avatar
@@ -90,20 +91,6 @@ const Transaction = () => {
                         type='panel-medium-text'
                         className='font-normal text-[15px] sm:text-[24px] lg:text-[24px]'
                     >
-                        Commission
-                    </ThemedText>
-                    <ThemedText
-                        type='empty'
-                        className='text-[15px] sm:text-[24px] leading-none font-semibold text-brown-100 font-poppins'
-                    >
-                        10
-                    </ThemedText>
-                </Box>
-                <Box className='justify-between'>
-                    <ThemedText
-                        type='panel-medium-text'
-                        className='font-normal text-[15px] sm:text-[24px] lg:text-[24px]'
-                    >
                         Exchange rate
                     </ThemedText>
                     <ThemedText
@@ -132,6 +119,20 @@ const Transaction = () => {
                         type='panel-medium-text'
                         className='font-normal text-[15px] sm:text-[24px] lg:text-[24px]'
                     >
+                        Payment method
+                    </ThemedText>
+                    <ThemedText
+                        type='empty'
+                        className='text-[15px] sm:text-[24px] leading-none font-semibold text-brown-100 font-poppins'
+                    >
+                        4149 **** **** 4523
+                    </ThemedText>
+                </Box>
+                <Box className='justify-between'>
+                    <ThemedText
+                        type='panel-medium-text'
+                        className='font-normal text-[15px] sm:text-[24px] lg:text-[24px]'
+                    >
                         Status
                     </ThemedText>
                     <Status
@@ -139,13 +140,13 @@ const Transaction = () => {
                         className='text-[15px] sm:text-[24px] md:text-[24px] llg:text-[24px] leading-none'
                     />
                 </Box>
-                <Button
-                    size='xl'
-                    variant='primary'
-                    className='sm:mx-auto lg:mx-0'
-                >
-                    Repeat
-                </Button>
+
+                <Box className='flex-col gap-[14px] sm:flex-row sm:gap-[30px] justify-start sm:mx-auto lg:mx-0'>
+                    <AdminSelect />
+                    <Button size='xl' variant='primary'>
+                        Save
+                    </Button>
+                </Box>
             </Box>
         </div>
     );

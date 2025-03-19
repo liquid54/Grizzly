@@ -12,10 +12,10 @@ export const ADMIN_MENU_LINKS = [
     {
         label: 'Withdrawals',
         href: Pages.ADMIN_WITHDRAWALS,
-        src: '/icons/user-panel/transaction.svg',
-        activeSrc: '/icons/user-panel/transactionActive.svg',
-        width: 18,
-        height: 18,
+        src: '/icons/user-panel/referral.svg',
+        activeSrc: '/icons/user-panel/referralActive.svg',
+        width: 19.2,
+        height: 19.2,
     },
     {
         label: 'Users',

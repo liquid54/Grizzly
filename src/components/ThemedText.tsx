@@ -1,3 +1,4 @@
+import { cn } from '@/utils';
 import React from 'react';
 
 export type textEnum =
@@ -35,6 +36,10 @@ export type textEnum =
     | 'text-main'
     | 'text-select'
     | 'text_card_about'
+    | 'admin-text-small'
+    | 'admin-subtitle'
+    | 'admin-subtitle-bold'
+    | 'admin-progress'
     | 'empty';
 
 export type ThemedTextProps = React.HTMLAttributes<HTMLSpanElement> & {
@@ -43,13 +48,13 @@ export type ThemedTextProps = React.HTMLAttributes<HTMLSpanElement> & {
 };
 
 export function ThemedText({
-                               type = 'text',
-                               className = '',
-                               ...rest
-                           }: ThemedTextProps) {
+    type = 'text',
+    className = '',
+    ...rest
+}: ThemedTextProps) {
     return (
         <span
-            className={`
+            className={cn(`
         ${type === 'heading' ? 'lg:text-[70px] md:text-[50px] text-[35px] font-bold text-brown-100 font-unbounded leading-[100%] tracking-[0%]' : ''}
         ${type === 'heading_blue' ? 'lg:text-[70px] md:text-[50px] text-[35px] font-bold text-blue-100 font-unbounded leading-[100%] tracking-[0%]' : ''}
         ${type === 'title' ? 'lg:text-[52px] text-[35px] font-semibold text-brown-100 font-unbounded' : ''}
@@ -79,6 +84,10 @@ export function ThemedText({
         ${type === 'panel-medium-text-blue' ? 'text-[16px] font-medium text-blue-100 font-poppins' : ''}
         ${type === 'text-footer' ? 'text-[15px] text-brown-100 font-poppins' : ''}
         ${type === 'text-main' ? 'text-[16px] lg:text-[18px] text-brown-100 font-poppins' : ''}
+        ${type === 'admin-text-small' ? 'text-[12px] md:text-[14px] font-poppins' : ''}
+        ${type === 'admin-subtitle' ? 'text-[14px] lg:text-[22px] font-semibold font-poppins' : ''}
+        ${type === 'admin-subtitle-bold' ? 'text-[22px] lg:text-[32px] font-bold font-poppins' : ''}
+        ${type === 'admin-progress' ? 'text-[14px] lg:text-[20px] font-semibold font-poppins' : ''}
         
         ${type === 'text-select' ? 'text-[16px] sm:text-[24px] md:font-semibold font-medium text-brown-100 font-poppins' : ''}
         ${type === 'title_currency' ? 'lg:text-[52px] md:text-[35px] text-[24px] font-semibold text-brown-100 font-unbounded' : ''}
@@ -92,7 +101,7 @@ export function ThemedText({
         ${type === 'subtitle_faq' ? 'md:text-[24px] text-[15px] font-semibold text-brown-100 font-poppins' : ''}
 
         ${type === 'empty' ? '' : ''}
-        ${className}`.trim()}
+        ${className}`)}
             {...rest}
         />
     );

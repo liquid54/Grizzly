@@ -3,8 +3,8 @@ import { ThemedText } from '@/components/ThemedText';
 import { Pages } from '@/constants/pages';
 import Link from 'next/link';
 import React from 'react';
-import Table from '../../components/table/Table';
-import { data, header } from '../../components/table/mockTransactionsData';
+import Table from '@/components/table/Table';
+import { data, header } from '@/components/table/mockTransactionsData';
 
 const LastExchange = () => {
     return (
@@ -24,7 +24,7 @@ const LastExchange = () => {
                 tableHeader={header}
                 indexMobileDismiss={[6]}
                 data={data}
-                gridTemplateColumns='135px 70px 50px 80px 120px 180px 50px'
+                gridTemplateColumns='grid-cols-[135px_70px_50px_80px_120px_180px_70px] llg:grid-cols-[175px_90px_65px_120px_175px_230px_105px]'
                 firstRenderElementKeys={['currency', 'status']}
                 pagination={false}
                 href={Pages.USER_PANEL_TRANSACTION}

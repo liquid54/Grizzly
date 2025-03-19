@@ -2,7 +2,7 @@
 import { ThemedText } from '@/components/ThemedText';
 import { Fragment, useState, type ReactNode } from 'react';
 import Pagination from '../pagination/Pagination';
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 interface RowData {
     [key: string]: ReactNode;
@@ -16,6 +16,7 @@ interface TableProps {
     firstRenderElementKeys?: string[];
     pagination?: boolean;
     href?: string;
+    settingsMenu?: ReactNode;
 }
 
 const Table: React.FC<TableProps> = ({
@@ -26,19 +27,19 @@ const Table: React.FC<TableProps> = ({
     firstRenderElementKeys,
     pagination = true,
     href,
+    settingsMenu,
 }) => {
+    const { push } = useRouter();
     const [page, setPage] = useState(1);
     const totalPages = 6;
+    const onTransaction = (id: string) => push(`${href}${id}`);
 
     return (
         <div className='flex flex-col gap-2 w-full items-center'>
             <div className='w-full overflow-x-auto'>
                 <div className='hidden md:grid items-center min-w-fit gap-[10px]'>
                     <div
-                        className={`grid items-center justify-between gap-4 bg-gray-300 rounded-xl min-h-[42px] px-4 llg:px-[30px] py-2`}
-                        style={{
-                            gridTemplateColumns,
-                        }}
+                        className={`grid items-center justify-between gap-4 bg-gray-300 rounded-xl min-h-[42px] px-4 llg:px-[30px] py-2 ${gridTemplateColumns}`}
                     >
                         {tableHeader.map((title, i) => (
                             <ThemedText
@@ -49,22 +50,19 @@ const Table: React.FC<TableProps> = ({
                                 {title}
                             </ThemedText>
                         ))}
+                        {settingsMenu ? <ThemedText /> : ''}
                     </div>
 
                     {data.map((row, rowIndex) => {
                         if (href) {
                             return (
-                                <Link
+                                <Column
                                     key={`${href}-${rowIndex}`}
-                                    href={`${href}${rowIndex}`}
-                                >
-                                    <Column
-                                        row={row}
-                                        gridTemplateColumns={
-                                            gridTemplateColumns
-                                        }
-                                    />
-                                </Link>
+                                    row={row}
+                                    gridTemplateColumns={gridTemplateColumns}
+                                    settingsMenu={settingsMenu}
+                                    onRoute={onTransaction}
+                                />
                             );
                         } else {
                             return (
@@ -72,6 +70,7 @@ const Table: React.FC<TableProps> = ({
                                     key={rowIndex}
                                     row={row}
                                     gridTemplateColumns={gridTemplateColumns}
+                                    settingsMenu={settingsMenu}
                                 />
                             );
                         }
@@ -83,7 +82,8 @@ const Table: React.FC<TableProps> = ({
                         return (
                             <div
                                 key={rowIndex}
-                                className='flex flex-col gap-[10px] rounded-xl border border-white-200 p-[15px]'
+                                className={`flex flex-col gap-[10px] rounded-xl border border-white-200 p-[15px] ${href ? 'cursor-pointer' : ''}`}
+                                onClick={() => onTransaction?.('22')}
                             >
                                 {Object.keys(row).map((key, i) => {
                                     if (indexMobileDismiss?.includes(i)) return;
@@ -116,7 +116,9 @@ const Table: React.FC<TableProps> = ({
                                         firstRenderElementKeys?.length
                                     ) {
                                         left = row[firstRenderElementKeys[0]];
-                                        right = row[firstRenderElementKeys[1]];
+                                        right = settingsMenu
+                                            ? settingsMenu
+                                            : row[firstRenderElementKeys[1]];
                                     }
 
                                     return (
@@ -150,15 +152,21 @@ export default Table;
 interface ColumnType {
     gridTemplateColumns: string;
     row: RowData;
+    settingsMenu?: ReactNode;
+    href?: string;
+    onRoute?: (id: string) => void;
 }
 
-const Column = ({ gridTemplateColumns, row }: ColumnType) => {
+const Column = ({
+    gridTemplateColumns,
+    row,
+    settingsMenu,
+    onRoute,
+}: ColumnType) => {
     return (
         <div
-            className='grid gap-4 items-center justify-between rounded-2xl border border-white-200 overflow-hidden px-4 llg:px-[30px] py-[9px] llg:py-[14px]'
-            style={{
-                gridTemplateColumns,
-            }}
+            className={`grid gap-4 items-center justify-between rounded-2xl border border-white-200 overflow-hidden px-4 llg:px-[30px] py-[9px] llg:py-[14px] ${onRoute ? 'cursor-pointer' : ''} ${gridTemplateColumns}`}
+            onClick={() => onRoute?.('22')}
         >
             {Object.keys(row).map((key, i) => {
                 const value = row[key];
@@ -177,6 +185,7 @@ const Column = ({ gridTemplateColumns, row }: ColumnType) => {
                     </ThemedText>
                 );
             })}
+            {settingsMenu}
         </div>
     );
 };

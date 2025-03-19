@@ -3,8 +3,8 @@ import { ThemedText } from '@/components/ThemedText';
 import { Pages } from '@/constants/pages';
 import Link from 'next/link';
 import React from 'react';
-import Table from '../../components/table/Table';
-import { data, header } from '../../components/table/mockReferralsData';
+import Table from '@/components/table/Table';
+import { data, header } from '@/components/table/mockReferralsData';
 
 const ProfitableReferrals = () => {
     return (
@@ -26,7 +26,7 @@ const ProfitableReferrals = () => {
                 tableHeader={header}
                 indexMobileDismiss={[2]}
                 data={data}
-                gridTemplateColumns='135px 110px 130px 110px 150px 120px'
+                gridTemplateColumns='grid-cols-[135px_110px_130px_110px_150px_120px]'
                 firstRenderElementKeys={['referral', 'telegram']}
                 pagination={false}
             />

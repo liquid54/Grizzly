@@ -1,11 +1,11 @@
-import ExchangeMain from "@/components/exchange/page";
+import ExchangeMain from '@/components/exchange/page';
 
 const ExchangePage = () => {
     return (
-        <div className='px-[357px] pb-[110px] pt-[100px]'>
-            <ExchangeMain buttonLink="/exchangeconfirm" visibleBorder={true}/>
+        <div className='pt-[100px] max-lg:px-[32px] max-sm:px-[16px] max-sm:pt-[50px]'>
+            <ExchangeMain buttonLink='/exchangeconfirm' visibleBorder={true} />
         </div>
     );
-}
+};
 
 export default ExchangePage;

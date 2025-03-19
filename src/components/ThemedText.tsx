@@ -40,6 +40,7 @@ export type textEnum =
     | 'admin-subtitle'
     | 'admin-subtitle-bold'
     | 'admin-progress'
+    | 'button_blue'
     | 'empty';
 
 export type ThemedTextProps = React.HTMLAttributes<HTMLSpanElement> & {
@@ -61,6 +62,8 @@ export function ThemedText({
         ${type === 'title_poppins' ? 'text-[24px] font-semibold text-brown-100 font-poppins' : ''}
         ${type === 'subtitle' ? 'text-[18px] sm:text-[20px] font-bold text-brown-100 font-poppins' : ''}
         ${type === 'subtitle_blue' ? 'text-[34px] font-bold text-blue-100 font-unbounded' : ''}
+
+        ${type === 'button_blue' ? 'text-[18px] font-norma text-sky-300 font-poppins' : ''}
 
         ${type === 'title_exchange' ? 'text-[24px] sm:text-[35px] lg:text-[52px] font-semibold text-brown-100 font-unbounded' : ''}
         ${type === 'text_exchange' ? 'text-[16px] lg:text-[18px]  font-normal text-brown-100 font-poppins' : ''}

@@ -1,11 +1,10 @@
-import ExchangeFailed from "@/components/exchange/exchange-failed/page";
-
+import ExchangeFailed from '@/components/exchange/exchange-failed/page';
 
 const ExchangeFailedPage = () => {
     return (
-        <div className='pt-[100px] pb-[161px] px-[370px]'>
-            <ExchangeFailed/>
+        <div className='px-[16px] pt-[100px] md:pt-[118px] sm:pt-[100px]'>
+            <ExchangeFailed />
         </div>
     );
-}
+};
 export default ExchangeFailedPage;

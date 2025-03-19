@@ -7,7 +7,7 @@ export default function RootLayout({
 }) {
     return (
         <ExchangeLayout>
-            <div>{children}</div>
+            <div className='z-1'>{children}</div>
         </ExchangeLayout>
     );
 }

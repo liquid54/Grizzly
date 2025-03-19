@@ -15,7 +15,7 @@ const Exchange = ({
 }) => {
     return (
         <div
-            className={`flex flex-col ${visibleBorder ? 'md:border md:border-[#CFCEDB] md:rounded-[18px]' : ''}`}
+            className={`flex flex-col ${visibleBorder ? 'md:border md:border-[#CFCEDB] md:rounded-[18px] md:p-[24px]' : ''}`}
             {...props}
         >
             <div className=' space-y-[20px] '>
@@ -24,7 +24,7 @@ const Exchange = ({
                         <div className='flex flex-col sm:flex-row  gap-[16px] sm:gap-[20px]'>
                             <Selector
                                 type='crypto'
-                                className='w-full sm:min-w-[405px]'
+                                className='w-full md:min-w-[408px] sm:min-w-[380px]'
                             />
                             <Input type='crypto' className='w-full' />
                         </div>
@@ -40,7 +40,7 @@ const Exchange = ({
                         <div className='space-y-[20px]'>
                             <Selector
                                 type='crypto'
-                                className='w-full sm:min-w-[405px]'
+                                className='w-full md:min-w-[408px] sm:min-w-[380px]'
                             />
                             <Input type='crypto' className='w-full' />
                         </div>
@@ -62,15 +62,24 @@ const Exchange = ({
                 <div
                     className={`${fullWindow ? 'flex flex-col  sm:flex-row gap-[16px] md:gap-[20px] ' : 'space-y-[20px]'}`}
                 >
-                    <Selector type='bank' className='w-full sm:min-w-[405px]' />
+                    <Selector
+                        type='bank'
+                        className='w-full md:min-w-[408px] sm:min-w-[380px]'
+                    />
                     <Input type='bank' className='w-full' />
                 </div>
 
                 <Agreement />
-                <div className={fullWidthButton ? '' : 'flex justify-center'}>
+                <div
+                    className={
+                        fullWidthButton
+                            ? 'w-full'
+                            : 'sm:flex sm:justify-center w-full'
+                    }
+                >
                     <Link href={buttonLink}>
                         <Button
-                            size='mid_large'
+                            size='medium'
                             className={fullWidthButton ? 'w-full' : ''}
                         >
                             Exchange

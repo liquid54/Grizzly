@@ -32,7 +32,7 @@ const Selector = ({
             <div
                 className={`relative bg-gray-400 border border-white-200 rounded-[16px] w-full ${className}`}
             >
-                <div className='flex flex-row items-center justify-between px-[14px] sm:px-[30px] py-[12px] sm:py-[18px]'>
+                <div className='flex flex-row items-center justify-between px-[14px] sm:px-[30px] py-[12px] md:py-[18px] sm:py-[21px]'>
                     <div className='flex space-x-[10px]  md:space-x-[20px]  items-center'>
                         <div className='flex h-[21px] w-[21px] md:h-full md:w-full items-center'>
                             <Icon />

@@ -1,6 +1,7 @@
 // ButtonTg.js - спрощений підхід
 import Button from '@/components/Button';
 import Telegram from '@/assets/icons/Telegram';
+import { ThemedText } from './ThemedText';
 
 const ButtonTg = ({ isMain = false }: { isMain?: boolean }) => {
     return (
@@ -10,7 +11,7 @@ const ButtonTg = ({ isMain = false }: { isMain?: boolean }) => {
                 <Button
                     size='tiny'
                     variant='social'
-                    className='flex cursor-pointer justify-center items-center border-2'
+                    className='flex cursor-pointer justify-center items-center '
                 >
                     <Telegram />
                 </Button>
@@ -22,11 +23,13 @@ const ButtonTg = ({ isMain = false }: { isMain?: boolean }) => {
                     <div className='w-full'>
                         <Button
                             size='small' // змінив на small замість medium
-                            variant='secondary'
+                            variant='blue'
                             className='!w-full flex cursor-pointer justify-center items-center border-2'
                         >
                             <Telegram />
-                            <span className='ml-2'>Telegram</span>
+                            <ThemedText type='button_blue' className='ml-2'>
+                                Telegram
+                            </ThemedText>
                         </Button>
                     </div>
                 </div>

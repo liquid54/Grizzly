@@ -10,7 +10,7 @@ type CardProps = {
 
 const Card = ({ icon, title, description}: CardProps) => {
     return (
-        <div className="flex flex-col items-start md:p-[30px] p-[20px] space-y-[20px] border border-white-200 rounded-[20px]">
+        <div className="flex flex-col items-start md:p-[30px] p-[20px] space-y-[20px] border border-white-200 rounded-[20px] bg-white">
             <div className='bg-gradient-to-br from-blue-100 to-blue-200 rounded-full p-[22px] items-center justify-center'>
                 {icon}
             </div>

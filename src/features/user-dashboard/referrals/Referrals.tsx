@@ -32,7 +32,7 @@ const Referrals = () => {
                         {/* filters */}
                         <CommonFilters
                             filters={['Wallet type', 'Total profit']}
-                            cols='minmax(134px,_195px)_minmax(134px,_195px)'
+                            cols={2}
                         />
                     </div>
                     <div className='hidden min-[1300px]:block'>

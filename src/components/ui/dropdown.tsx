@@ -67,7 +67,7 @@ const MenuItem = forwardRef<
     <DropdownMenu.Item
         ref={ref}
         className={cn(
-            'relative cursor-pointer flex items-center gap-4 px-5 pt-3 pb-[14px] sm:px-5 sm:py-5 text-[15px] lg:text-[18px] font-normal leading-none font-poppins',
+            'hover:bg-white-300/5 relative cursor-pointer flex items-center gap-4 px-5 pt-3 pb-[14px] sm:px-5 sm:py-5 text-[15px] lg:text-[18px] font-normal leading-none font-poppins',
 
             className,
         )}

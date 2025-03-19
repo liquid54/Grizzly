@@ -17,6 +17,8 @@ interface TableProps {
     pagination?: boolean;
     href?: string;
     settingsMenu?: ReactNode;
+    renderWithSettings?: string;
+    missTruncate?: number[];
 }
 
 const Table: React.FC<TableProps> = ({
@@ -28,6 +30,8 @@ const Table: React.FC<TableProps> = ({
     pagination = true,
     href,
     settingsMenu,
+    missTruncate,
+    renderWithSettings,
 }) => {
     const { push } = useRouter();
     const [page, setPage] = useState(1);
@@ -54,26 +58,16 @@ const Table: React.FC<TableProps> = ({
                     </div>
 
                     {data.map((row, rowIndex) => {
-                        if (href) {
-                            return (
-                                <Column
-                                    key={`${href}-${rowIndex}`}
-                                    row={row}
-                                    gridTemplateColumns={gridTemplateColumns}
-                                    settingsMenu={settingsMenu}
-                                    onRoute={onTransaction}
-                                />
-                            );
-                        } else {
-                            return (
-                                <Column
-                                    key={rowIndex}
-                                    row={row}
-                                    gridTemplateColumns={gridTemplateColumns}
-                                    settingsMenu={settingsMenu}
-                                />
-                            );
-                        }
+                        return (
+                            <Column
+                                key={`${href || ''}-${rowIndex}`}
+                                row={row}
+                                gridTemplateColumns={gridTemplateColumns}
+                                missTruncate={missTruncate}
+                                settingsMenu={settingsMenu}
+                                onRoute={href ? onTransaction : undefined}
+                            />
+                        );
                     })}
                 </div>
                 {/* Mobile */}
@@ -90,6 +84,8 @@ const Table: React.FC<TableProps> = ({
 
                                     const value = row[key];
                                     const isNode = typeof value === 'object';
+                                    const isNotTruncate =
+                                        missTruncate?.includes(i);
 
                                     let left: ReactNode = (
                                         <ThemedText
@@ -105,7 +101,7 @@ const Table: React.FC<TableProps> = ({
                                     ) : (
                                         <ThemedText
                                             type='panel-table-header'
-                                            className='whitespace-nowrap truncate'
+                                            className={`${isNotTruncate ? 'break-words' : 'truncate whitespace-nowrap'} font-medium text-brown-100`}
                                         >
                                             {value}
                                         </ThemedText>
@@ -116,9 +112,28 @@ const Table: React.FC<TableProps> = ({
                                         firstRenderElementKeys?.length
                                     ) {
                                         left = row[firstRenderElementKeys[0]];
-                                        right = settingsMenu
-                                            ? settingsMenu
-                                            : row[firstRenderElementKeys[1]];
+                                        right = settingsMenu ? (
+                                            <div className='flex items-center'>
+                                                {renderWithSettings &&
+                                                row[renderWithSettings] ? (
+                                                    <ThemedText
+                                                        type='panel-table-header'
+                                                        className='text-blue-100 font-semibold text-[14px] break-all'
+                                                    >
+                                                        {
+                                                            row[
+                                                                renderWithSettings
+                                                            ]
+                                                        }
+                                                    </ThemedText>
+                                                ) : (
+                                                    ''
+                                                )}
+                                                {settingsMenu}
+                                            </div>
+                                        ) : (
+                                            row[firstRenderElementKeys[1]]
+                                        );
                                     }
 
                                     return (
@@ -153,6 +168,7 @@ interface ColumnType {
     gridTemplateColumns: string;
     row: RowData;
     settingsMenu?: ReactNode;
+    missTruncate?: number[];
     href?: string;
     onRoute?: (id: string) => void;
 }
@@ -161,6 +177,7 @@ const Column = ({
     gridTemplateColumns,
     row,
     settingsMenu,
+    missTruncate,
     onRoute,
 }: ColumnType) => {
     return (
@@ -171,6 +188,7 @@ const Column = ({
             {Object.keys(row).map((key, i) => {
                 const value = row[key];
                 const isNode = typeof value === 'object';
+                const isNotTruncate = missTruncate?.includes(i);
 
                 if (isNode) {
                     return <Fragment key={`${key}-${i}`}>{value}</Fragment>;
@@ -179,7 +197,7 @@ const Column = ({
                     <ThemedText
                         key={`${key}-${i}`}
                         type='panel-table-header'
-                        className='whitespace-nowrap max-[1420px]:truncate'
+                        className={`font-normal ${isNotTruncate ? 'break-words' : 'max-[1420px]:truncate whitespace-nowrap '} text-brown-100`}
                     >
                         {value}
                     </ThemedText>
